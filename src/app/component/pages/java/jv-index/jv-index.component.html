@@ -1,0 +1,71 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Java</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Java</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+         <div class="accrodion-regular accordion-custom">
+		    <div id="accordion">
+		    	<div class="card">
+		            <div class="card-header" id="headingTwo">
+		                <h5 class="mb-0">
+		                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		                    <b>Java Basic</b>
+		                    </button>
+		                </h5>
+		            </div>
+		            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		                <div class="card-body">
+		                    <ol>
+		                    	<li><a [routerLink]="['basic-convert']">Chuyển đổi giữa các kiểu dữ liệu</a></li>
+		                    </ol>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="card">
+		            <div class="card-header" id="headingOne">
+		                <h5 class="mb-0">
+		                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		                    <b>Hướng đối tượng OOP</b>
+		                    </button>
+		                </h5>
+		            </div>
+		            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+		                <div class="card-body">
+		                    <ol>
+		                    	<li><a [routerLink]="['oop-getset']">Getters & Setters</a></li>
+		                    	<li><a [routerLink]="['oop-construcstor']">Constructors</a></li>
+		                    	<li><a [routerLink]="['oop-encapsulation']">Đóng gói (Encapsulation)</a></li>
+		                    	<li><a [routerLink]="['oop-inheritance']">Kế thừa (Inheritance)</a></li>
+		                    	<li><a [routerLink]="['oop-polymorphism']">Đa hình (Polymorphism)</a></li>
+		                    	<li><a [routerLink]="['oop-abstract-class']">Lớp trừu tượng (Abstract Class)</a></li>
+		                    	<li><a [routerLink]="['oop-interfaces']">Giao diện (Interfaces)</a></li>
+		                    	<li><a [routerLink]="['oop-overloading-overriding']">Nạp chồng phương thức và ghi đè phương thức (overloading & overriding)</a></li>
+		                    	<li><a [routerLink]="['oop-anonymous-class']">Anonymous Class</a></li>
+		                    	<li><a [routerLink]="['oop-inner-class']">Lớp lồng nhau (Inner Class)</a></li>
+		                    	<li><a [routerLink]="['oop-method-equals']">Phương thức equals() (So sánh đối tượng)</a></li>
+		                    </ol>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    </div>
+</div>

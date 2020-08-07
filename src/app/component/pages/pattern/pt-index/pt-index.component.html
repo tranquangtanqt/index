@@ -1,0 +1,361 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="page-header">
+			<h2 class="pageheader-title">Pattern</h2>
+			<div class="page-breadcrumb">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Pattern</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="accrodion-regular accordion-custom">
+			<div id="accordion">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th scope="col" style="width: 150px;">Pattern</th>
+							<th scope="col">Source code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * *</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion1">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion1" aria-expanded="false" aria-controls="collapse-accordion1">
+												<b>Click show source code 1</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion1" class="collapse" aria-labelledby="heading-accordion1" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 1; i <= 5; i++){{ '{' }}
+    for(int j = 1; j <= 5; j++){{ '{' }}
+        s += "* ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>											
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">1 1 1 1 1 
+2 2 2 2 2 
+3 3 3 3 3 
+4 4 4 4 4 
+5 5 5 5 5</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion2">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion2" aria-expanded="false" aria-controls="collapse-accordion2">
+												<b>Click show source code 2</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion2" class="collapse" aria-labelledby="heading-accordion2" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 1; i <= 5; i++){{ '{' }}
+    for(int j = 1; j <= 5; j++){{ '{' }}
+        s += i + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>											
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">1 2 3 4 5 
+1 2 3 4 5 
+1 2 3 4 5 
+1 2 3 4 5 
+1 2 3 4 5</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion3">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion3" aria-expanded="false" aria-controls="collapse-accordion3">
+												<b>Click show source code 3</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion3" class="collapse" aria-labelledby="heading-accordion3" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 1; i <= 5; i++){{ '{' }}
+    for(int j = 1; j <= 5; j++){{ '{' }}
+        s += j + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>											
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">A A A A A 
+B B B B B 
+C C C C C 
+D D D D D 
+E E E E E</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion4">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion4" aria-expanded="false" aria-controls="collapse-accordion4">
+												<b>Click show source code 4</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion4" class="collapse" aria-labelledby="heading-accordion4" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(char i = 'A'; i <= 'E'; i++){{ '{' }}
+    for(char j = 'A'; j <= 'E'; j++){{ '{' }}
+        s += i + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">A B C D E 
+A B C D E 
+A B C D E 
+A B C D E 
+A B C D E</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion5">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion5" aria-expanded="false" aria-controls="collapse-accordion5">
+												<b>Click show source code 5</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion5" class="collapse" aria-labelledby="heading-accordion5" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(char i = 'A'; i <= 'E'; i++){{ '{' }}
+    for(char j = 'A'; j <= 'E'; j++){{ '{' }}
+        s += j + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">5 5 5 5 5 
+4 4 4 4 4 
+3 3 3 3 3 
+2 2 2 2 2 
+1 1 1 1 1</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion6">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion6" aria-expanded="false" aria-controls="collapse-accordion6">
+												<b>Click show source code 6</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion6" class="collapse" aria-labelledby="heading-accordion6" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 5; i >= 1; i--){{ '{' }}
+    for(int j = 5; j >= 1; j--){{ '{' }}
+        s += i + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">5 4 3 2 1 
+5 4 3 2 1 
+5 4 3 2 1 
+5 4 3 2 1 
+5 4 3 2 1</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion7">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion7" aria-expanded="false" aria-controls="collapse-accordion7">
+												<b>Click show source code 7</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion7" class="collapse" aria-labelledby="heading-accordion7" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 5; i >= 1; i--){{ '{' }}
+    for(int j = 5; j >= 1; j--){{ '{' }}
+        s += j + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">E E E E E 
+D D D D D 
+C C C C C 
+B B B B B 
+A A A A A</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion8">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion8" aria-expanded="false" aria-controls="collapse-accordion8">
+												<b>Click show source code 8</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion8" class="collapse" aria-labelledby="heading-accordion8" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(char i = 'E'; i >= 'A'; i--){{ '{' }}
+    for(char j = 'E'; j >= 'A'; j--){{ '{' }}
+        s += i + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">E D C B A 
+E D C B A 
+E D C B A 
+E D C B A 
+E D C B A</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion9">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion9" aria-expanded="false" aria-controls="collapse-accordion9">
+												<b>Click show source code 9</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion9" class="collapse" aria-labelledby="heading-accordion9" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(char i = 'E'; i >= 'A'; i--){{ '{' }}
+    for(char j = 'E'; j >= 'A'; j--){{ '{' }}
+        s += j + " ";
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">
+<pre><code class="language-java">* 
+* * 
+* * * 
+* * * * 
+* * * * *</code></pre>
+							</td>
+							<td>
+								<div class="card">
+									<div class="card-header" id="heading-accordion10">
+										<h5 class="mb-0">
+											<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion10" aria-expanded="false" aria-controls="collapse-accordion10">
+												<b>Click show source code 10</b>
+											</button>
+										</h5>
+									</div>
+									<div id="collapse-accordion10" class="collapse" aria-labelledby="heading-accordion10" data-parent="#accordion">
+										<div class="card-body">
+<pre><code class="language-csharp">string s = "";
+for(int i = 1; i <= 5; i++){{ '{' }}
+    for(int j = 1; j <= 5; j++){{ '{' }}
+        if(j <= i){{ '{' }}
+            s += "* ";
+        {{ '}' }}
+    {{ '}' }}
+    s += "\n";
+{{ '}' }}
+Console.WriteLine(s);</code></pre>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

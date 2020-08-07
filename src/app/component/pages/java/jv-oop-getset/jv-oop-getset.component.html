@@ -1,0 +1,55 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Getters & Setters</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Getters & Setters</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>- Getters và Setters được sử dụng để bảo vệ dữ liệu một cách hiệu quả, đặc biệt khi tạo các lớp. Đối với mỗi biến, phương thức get trả về giá trị, trong khi phương thức set đặt giá trị.</p>
+        <p>- Getters bắt đầu bằng get, tiếp theo là tên biến, với chữ cái đầu tiên của tên biến được viết hoa.</p>
+        <p>- Setters bắt đầu bằng set, theo sau là tên biến, với chữ cái đầu tiên của tên biến được viết hoa.</p>
+        <p>- Phương thức getter trả về giá trị của thuộc tính.</p>
+        <p>- Phương thức setter lấy một tham số và gán nó cho thuộc tính.</p>
+        <pre><code class="language-java">public class Vehicle {{ '{' }}
+    private String color;
+    
+    // Getter
+    public String getColor() {{ '{' }}
+        return color;
+    {{ '}' }}
+    
+    // Setter
+    public void setColor(String c) {{ '{' }}
+        this.color = c;
+    {{ '}' }}
+{{ '}' }}
+
+class Program {{ '{' }}
+    public static void main(String[ ] args) {{ '{' }}
+        Vehicle v1 = new Vehicle();
+        v1.setColor("Red");
+        System.out.println(v1.getColor());
+    {{ '}' }}
+{{ '}' }}
+/*** OUTPUT ***
+Red
+***************/</code></pre>
+    </div>
+</div>

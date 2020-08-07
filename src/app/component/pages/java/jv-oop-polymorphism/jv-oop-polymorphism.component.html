@@ -1,0 +1,64 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Đa hình (Polymorphism)</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Đa hình (Polymorphism)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>Đa hình, trong đó đề cập đến ý tưởng 'có nhiều hình thức', xảy ra khi có một thứ bậc của các lớp liên quan đến nhau thông qua kế thừa. (Đa hình là một khái niệm mà chúng ta có thể thực hiện một hành động bằng nhiều cách khác nhau).</p>
+        <p><b>Ví dụ: </b> <i>Dog</i> và <i>Cat</i> là các lớp thừa hưởng từ lớp <i>Animal</i>. Mỗi lớp có thực hiện riêng một phương thức <i>makeSound ()</i>.</p>
+		<pre><code class="language-java">class Animal {{ '{' }}
+    public void makeSound() {{ '{' }}
+        System.out.println("Grr...");
+    {{ '}' }}
+{{ '}' }}
+
+//Dog và Cat là các lớp kế thừa từ lớp Animal. Mỗi lớp thực hiện riêng một phương thức makeSound () 
+class Cat extends Animal {{ '{' }}
+    public void makeSound() {{ '{' }}
+        System.out.println("Meow");
+    {{ '}' }}
+{{ '}' }}
+
+class Dog extends Animal {{ '{' }}
+    public void makeSound() {{ '{' }}
+        System.out.println("Woof");
+    {{ '}' }}
+{{ '}' }}
+
+class Program {{ '{' }}
+    public static void main(String args[ ]) {{ '{' }}
+        //Tạo ra hai biến tham chiếu của Animal và chỉ chúng tới đối tượng Cat and Dog.
+        Animal a = new Dog();
+        Animal b = new Cat();
+        
+        a.makeSound();
+        b.makeSound();
+    {{ '}' }}
+{{ '}' }}
+
+/**********
+ * Output
+ * Woof
+ * Meow
+***********/</code></pre>
+		   
+    </div>
+</div>

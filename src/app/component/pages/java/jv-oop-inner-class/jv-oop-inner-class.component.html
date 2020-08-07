@@ -1,0 +1,54 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Lớp lồng nhau (Inner Class)</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Lớp lồng nhau (Inner Class)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>Java hỗ trợ các lớp lồng nhau; một lớp có thể là thành viên của một lớp khác.</p>
+        <p>Tạo một lớp bên trong một lớp là khá đơn giản. Chỉ cần viết một lớp trong một lớp. Không giống như một lớp, một lớp bên trong có thể là <i>private</i>. Một khi bạn khai báo lớp bên trong <i>private</i>, nó không thể được truy cập từ một đối tượng bên ngoài lớp.</p>
+		<pre><code class="language-java">class Robot {{ '{' }}
+    int id;
+    Robot(int i) {{ '{' }}
+        id = i;
+        Brain b = new Brain();
+        b.think();
+    {{ '}' }}
+
+    private class Brain {{ '{' }}
+        public void think() {{ '{' }}
+            System.out.println(id + " is thinking");
+        {{ '}' }}
+    {{ '}' }}
+{{ '}' }}
+
+public class Program {{ '{' }}
+    public static void main(String[] args) {{ '{' }}
+        Robot r = new Robot(1);
+    {{ '}' }}
+{{ '}' }}
+
+/******************
+ * Output
+ * 1 is thinking
+******************/</code></pre>
+		<p>Lớp <i>Robot</i> có một lớp <i>Brain</i> ở bên trong. Lớp bên trong có thể truy cập vào tất cả các biến thành viên và các phương thức của lớp bên ngoài, nhưng nó không thể được truy cập từ bất kỳ lớp ngoài nào.</p>
+    </div>
+</div>
