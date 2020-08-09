@@ -16,8 +16,10 @@ import { FooterComponent } from './component/layout/footer/footer.component';
 import { HeaderComponent } from './component/layout/header/header.component';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
 import { HomeIndexComponent } from './component/pages/homepage/home-index/home-index.component';
-import { DemoHighlightComponent } from './component/pages/demo/demo-highlight/demo-highlight.component';
+
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
+//Demo
+import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
 //IDE 
@@ -40,7 +42,7 @@ import { JvOopAnonymousClassComponent } from './component/pages/java/jv-oop-anon
 import { JvOopInnerClassComponent } from './component/pages/java/jv-oop-inner-class/jv-oop-inner-class.component';
 import { JvOopMethodEqualsComponent } from './component/pages/java/jv-oop-method-equals/jv-oop-method-equals.component';
 import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert/jv-basic-convert.component';
-
+import { TableOfContentComponent } from './component/layout/table-of-content/table-of-content.component';
 
 
 
@@ -52,7 +54,6 @@ import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert
     HeaderComponent,
     SidebarComponent,
     HomeIndexComponent,
-    DemoHighlightComponent,
     LibPrismComponent,
     JvIndexComponent,
     JvOopGetsetComponent,
@@ -70,7 +71,9 @@ import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert
     DlIndexComponent,
     IdeIndexComponent,
     IdeHotkeyVsComponent,
-    PtIndexComponent
+    PtIndexComponent,
+    PatternComponent,
+    TableOfContentComponent
   ],
   imports: [
     BrowserModule,

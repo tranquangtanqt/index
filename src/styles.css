@@ -130,6 +130,12 @@
 .menu-list ul li a i {
     color: yellow !important;
 }
+.first-line-one-tab {
+    text-indent: 30px;
+}
+.first-line-two-tab {
+    text-indent: 60px;
+}
 /* HIGHLIGHTJS
 ========================================================================== */
 
@@ -197,7 +203,7 @@ body {
     /*font-family: 'Circular Std Book';*/
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    /*font-size: 14px;*/
     color: #71748d;
     background-color: #efeff6;
     -webkit-font-smoothing: antialiased;
@@ -242,7 +248,7 @@ h6 {
 }
 
 p {
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 p:last-child {

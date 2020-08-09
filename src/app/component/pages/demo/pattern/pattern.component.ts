@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightService } from "./../../../../services/highlight/highlight.service";
+import { Pattern, PATTERN_CONST } from "./../../../../data/data-pattern";
 
 @Component({
-  selector: 'app-demo-highlight',
-  templateUrl: './demo-highlight.component.html',
-  styleUrls: ['./demo-highlight.component.css']
+  selector: 'app-pattern',
+  templateUrl: './pattern.component.html',
+  styleUrls: ['./pattern.component.css']
 })
-export class DemoHighlightComponent implements OnInit {
+export class PatternComponent implements OnInit {
   private highlighted: boolean = false;
+  pattern: Pattern[];
 
   constructor(private highlightService: HighlightService) { }
 
   ngOnInit(): void {
+    this.pattern = PATTERN_CONST;
   }
   ngAfterViewChecked() {
     if (!this.highlighted) {
@@ -19,5 +22,4 @@ export class DemoHighlightComponent implements OnInit {
       this.highlighted = true;
     }
   }
-
 }

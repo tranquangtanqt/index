@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BaseLayoutComponent } from './component/layout/base-layout/base-layout.component';
 import { HomeIndexComponent } from './component/pages/homepage/home-index/home-index.component';
+//Demo
+import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
 //IDE
 import { IdeIndexComponent } from './component/pages/ide/ide-index/ide-index.component';
@@ -35,6 +37,7 @@ const routes: Routes = [
 		children: [
 			//homepage
 			{ path: '', component: HomeIndexComponent },
+			//Java
 			{ path: 'java', component: JvIndexComponent },
 			{ path: 'java/oop-getset', component: JvOopGetsetComponent },
 			{ path: 'java/oop-construcstor', component: JvOopConstrucstorsComponent },
@@ -47,21 +50,22 @@ const routes: Routes = [
 			{ path: 'java/oop-anonymous-class', component: JvOopAnonymousClassComponent },
 			{ path: 'java/oop-inner-class', component: JvOopInnerClassComponent },
 			{ path: 'java/oop-method-equals', component: JvOopMethodEqualsComponent },
-			
 			{ path: 'java/basic-convert', component: JvBasicConvertComponent },
-
 
 			//Download
 			{path: 'download', component: DlIndexComponent},
 			//IDE 
 			{path: 'ide', component: IdeIndexComponent},
 			{path: 'ide/hotkey-vs', component: IdeHotkeyVsComponent},
-
-			//libraryAngular
 			
+			//pattern program
 			{path: 'pattern', component: PtIndexComponent},
-
+			
+			//libraryAngular
 			{path: 'prism', component: LibPrismComponent},
+			
+			//demo
+			{path: 'demo-pattern', component: PatternComponent},
 		]
 	},
 	// {path: '**', redirectTo: ''}

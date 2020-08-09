@@ -8,7 +8,7 @@
             <div class="page-breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/" class="breadcrumb-link">Trang chủ</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Java</li>
                     </ol>
                 </nav>
@@ -24,44 +24,84 @@
          <div class="accrodion-regular accordion-custom">
 		    <div id="accordion">
 		    	<div class="card">
-		            <div class="card-header" id="headingTwo">
+		            <div class="card-header" id="heading1">
 		                <h5 class="mb-0">
-		                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 		                    <b>Java Basic</b>
 		                    </button>
 		                </h5>
 		            </div>
-		            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		            <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
 		                <div class="card-body">
 		                    <ol>
-		                    	<li><a [routerLink]="['basic-convert']">Chuyển đổi giữa các kiểu dữ liệu</a></li>
+		                    	<li><a routerLink="basic-convert">Chuyển đổi giữa các kiểu dữ liệu</a></li>
 		                    </ol>
 		                </div>
 		            </div>
 		        </div>
 		        <div class="card">
-		            <div class="card-header" id="headingOne">
+		            <div class="card-header" id="heading2">
 		                <h5 class="mb-0">
-		                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 		                    <b>Hướng đối tượng OOP</b>
 		                    </button>
 		                </h5>
 		            </div>
-		            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+		            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
 		                <div class="card-body">
 		                    <ol>
-		                    	<li><a [routerLink]="['oop-getset']">Getters & Setters</a></li>
-		                    	<li><a [routerLink]="['oop-construcstor']">Constructors</a></li>
-		                    	<li><a [routerLink]="['oop-encapsulation']">Đóng gói (Encapsulation)</a></li>
-		                    	<li><a [routerLink]="['oop-inheritance']">Kế thừa (Inheritance)</a></li>
-		                    	<li><a [routerLink]="['oop-polymorphism']">Đa hình (Polymorphism)</a></li>
-		                    	<li><a [routerLink]="['oop-abstract-class']">Lớp trừu tượng (Abstract Class)</a></li>
-		                    	<li><a [routerLink]="['oop-interfaces']">Giao diện (Interfaces)</a></li>
-		                    	<li><a [routerLink]="['oop-overloading-overriding']">Nạp chồng phương thức và ghi đè phương thức (overloading & overriding)</a></li>
-		                    	<li><a [routerLink]="['oop-anonymous-class']">Anonymous Class</a></li>
-		                    	<li><a [routerLink]="['oop-inner-class']">Lớp lồng nhau (Inner Class)</a></li>
-		                    	<li><a [routerLink]="['oop-method-equals']">Phương thức equals() (So sánh đối tượng)</a></li>
+		                    	<li><a routerLink="oop-getset">Getters & Setters</a></li>
+		                    	<li><a routerLink="oop-construcstor">Constructors</a></li>
+		                    	<li><a routerLink="oop-encapsulation">Đóng gói (Encapsulation)</a></li>
+		                    	<li><a routerLink="oop-inheritance">Kế thừa (Inheritance)</a></li>
+		                    	<li><a routerLink="oop-polymorphism">Đa hình (Polymorphism)</a></li>
+		                    	<li><a routerLink="oop-abstract-class">Lớp trừu tượng (Abstract Class)</a></li>
+		                    	<li><a routerLink="oop-interfaces">Giao diện (Interfaces)</a></li>
+		                    	<li><a routerLink="oop-overloading-overriding">Nạp chồng phương thức và ghi đè phương thức (overloading & overriding)</a></li>
+		                    	<li><a routerLink="oop-anonymous-class">Anonymous Class</a></li>
+		                    	<li><a routerLink="oop-inner-class">Lớp lồng nhau (Inner Class)</a></li>
+		                    	<li><a routerLink="oop-method-equals">Phương thức equals() (So sánh đối tượng)</a></li>
 		                    </ol>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="card">
+		            <div class="card-header" id="heading3">
+		                <h5 class="mb-0">
+		                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+		                    <b>Kiến thức cơ bản</b>
+		                    </button>
+		                </h5>
+		            </div>
+		            <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+		                <div class="card-body">
+		                    <p><b>- POJO (Plain Old Java Object): </b></p>
+		                    <p class="first-line-one-tab">+ Là những Java object không bị hạn chế bởi bất cứ thứ gì khác (nghĩa là không hiện thực hay được mở rộng từ bất kỳ một class nào khác và cũng không chứa bất kỳ annotation nào.</p>
+		                    <p class="first-line-one-tab">+ Chỉ chứa các thuộc tính, các phương thức setter, getter của những thuộc tính đó (có thể có thêm cả các phương thức override toString() và equals()).</p>
+		                    <p><b>- JavaBean: </b></p>
+		                    <p class="first-line-one-tab">+ Là POJO.</p>
+		                    <p class="first-line-one-tab">+ Có ít nhất một constructor không có tham số.</p>
+		                    <p class="first-line-one-tab">+ Implement interface Serializable.</p>
+		                    <p><b>- ORM: </b> (viết tắt của Object Relational Mapping) là một công nghệ/ khái niệm/ quá trình chuyển đổi dữ liệu từ ngôn ngữ hướng đối tượng sang cơ sở dữ liệu quan hệ và ngược lại. Ví dụ, trong Java nó được thực hiện với sự trợ giúp của Reflection và JDBC.</p>
+		                    <p><b>- JPA</b> (viết tắt của Java Persistence API) là một <b><i>chuẩn đặc tả</i></b> cho việc ánh xạ giữa các đối tượng Java và cơ sở dữ liệu quan hệ thông qua công nghệ ORM (Object Relational Mapping).</p>
+		                    <p><b>Entity: </b> là các đối tượng thể hiện tương ứng một table trong cơ sở dữ liệu.</p>
+
+		                    <p class="first-line-one-tab"></p>
+		                    <p class="first-line-one-tab"></p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="card">
+		            <div class="card-header" id="heading4">
+		                <h5 class="mb-0">
+		                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+		                    <b>Java Persistence API (JPA)</b>
+		                    </button>
+		                </h5>
+		            </div>
+		            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+		                <div class="card-body">
+							<p><b>JPA</b> (viết tắt của Java Persistence API) là một <b><i>chuẩn đặc tả</i></b> cho việc ánh xạ giữa các đối tượng Java và cơ sở dữ liệu quan hệ thông qua công nghệ ORM (Object Relational Mapping).</p>
 		                </div>
 		            </div>
 		        </div>

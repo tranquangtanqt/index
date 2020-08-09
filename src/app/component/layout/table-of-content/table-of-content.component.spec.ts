@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DemoHighlightComponent } from './demo-highlight.component';
+import { TableOfContentComponent } from './table-of-content.component';
 
-describe('DemoHighlightComponent', () => {
-  let component: DemoHighlightComponent;
-  let fixture: ComponentFixture<DemoHighlightComponent>;
+describe('TableOfContentComponent', () => {
+  let component: TableOfContentComponent;
+  let fixture: ComponentFixture<TableOfContentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemoHighlightComponent ]
+      declarations: [ TableOfContentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DemoHighlightComponent);
+    fixture = TestBed.createComponent(TableOfContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

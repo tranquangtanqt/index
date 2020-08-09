@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightService } from "./../../../../services/highlight/highlight.service";
+import { Pattern, PATTERN_CONST } from "./../../../../data/data-pattern";
 
 @Component({
   selector: 'app-pt-index',
@@ -8,10 +9,12 @@ import { HighlightService } from "./../../../../services/highlight/highlight.ser
 })
 export class PtIndexComponent implements OnInit {
   private highlighted: boolean = false;
+  pattern: Pattern[];
 
   constructor(private highlightService: HighlightService) { }
 
   ngOnInit(): void {
+    this.pattern = PATTERN_CONST;
   }
   ngAfterViewChecked() {
     if (!this.highlighted) {

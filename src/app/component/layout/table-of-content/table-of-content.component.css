@@ -1,0 +1,80 @@
+#toc-panel {
+    max-height: 500px;
+    background: #fafafa;
+    border: solid 2px #4a86b8;
+    position: fixed;
+    top: 120px;
+    
+}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: 264px;
+   
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+
+.toc-hidden {
+    right: -264px;
+}
+
+.toc-show {
+    right: 0px;
+}
+
+
+#button-show-toc {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  top: 70px;
+  right: 0px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button-show-toc::after  {
+  content: "\f039";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button-show-toc:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button-show-toc:active {
+  background-color: #555;
+}
+
+#button-show-toc.show {
+  opacity: 1;
+  visibility: visible;
+}
