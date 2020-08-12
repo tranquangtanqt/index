@@ -22,7 +22,7 @@
 <!-- ============================================================== -->
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-        <p><b>1. Đổi số thành chuỗi</b></p>
+        <p id="goto1"><b>1. Đổi số thành chuỗi</b></p>
         <p><i>a. Sử dụng String.valueOf()</i></p>
 		<pre><code class="language-java">String str = String.valueOf(value);</code></pre>
 		<p><i>b. Sử dụng toString()</i></p>
@@ -30,27 +30,28 @@
 		<p><i>c. Cộng chuỗi rỗng với số</i></p>
 		<pre><code class="language-java">String str = "" + value;</code></pre>
 		<p>Lưu ý: Khuyên dùng String.valueOf() để tránh lỗi NullPointerException nếu value là null.</p>
-		<p><b>2. Đổi chuỗi thành số</b></p>
+		<p id="goto2"><b>2. Đổi chuỗi thành số</b></p>
 		<p><i>a. Sử dụng parseType()</i></p>
 		<pre><code class="language-java">type num = Type.parseType(str);</code></pre>
 		<p><i>b. Sử dụng valueOf()</i></p>
 		<pre><code class="language-java">Type num = Type.valueOf(str);</code></pre>
 		<p><i>c. Sử dụng decode()</i></p>
 		<pre><code class="language-java"></code>Type num = Type.decode(str);</pre>
-		<p><b>3. Chuyển đổi từ hệ thập phân sang nhị phân, bát phân, thập lục phân</b></p>
+		<p id="goto3"><b>3. Chuyển đổi từ hệ thập phân sang nhị phân, bát phân, thập lục phân</b></p>
 		<p><i>a. Chuyển đổi từ thập phân sang nhị phân</i></p>
 		<pre><code class="language-java">String str = Integer.toBanaryString(value);</code></pre>
 		<p><i>b. Chuyển đổi từ thập phân sang bát phân</i></p>
 		<pre><code class="language-java">String str = Integer.toOctalString(value);</code></pre>
 		<p><i>c. Chuyển đổi từ thập phân sang thập lục phân</i></p>
 		<pre><code class="language-java">String str = Integer.toHexString(value);</code></pre>
-		<p><b>4. Chuyển đổi từ hệ nhị phân, bát phân, thập lục phân sang hệ thập phân</b></p>
+		<p id="goto4"><b>4. Chuyển đổi từ hệ nhị phân, bát phân, thập lục phân sang hệ thập phân</b></p>
 		<pre><code class="language-java">Type number = Type.parseType(str, 2);
 Type number = Type.parseType(str, 8);
 Type number = Type.parseType(str, 16);
 Type number = Type.valueOf(str, 2);
 Type number = Type.valueOf(str, 8);
 Type number = Type.valueOf(str, 16);</code></pre>
+		<app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
     </div>
 </div>
 

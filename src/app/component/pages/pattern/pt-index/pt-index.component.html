@@ -22,7 +22,7 @@
 <div class="row">
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="row">
-			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of pattern">
+			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12" *ngFor="let item of pattern" attr.id="goto{{item.id}}">
 				<div class="card border-3 border-top-primary">
 					<div class="card-header">
 					<p><b>Pattern #{{item.id}}</b></p>
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 			</div>
-
+			<app-table-of-content [childDataToc]="dataTocPattern"></app-table-of-content>
 		</div>
 	</div>
 </div>

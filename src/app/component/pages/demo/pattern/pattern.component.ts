@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightService } from "./../../../../services/highlight/highlight.service";
-import { Pattern, PATTERN_CONST } from "./../../../../data/data-pattern";
+import { IPattern } from "./../../../../data/interface";
+import { PATTERN_CONST } from "./../../../../data/pattern/data-pattern";
 
 @Component({
   selector: 'app-pattern',
@@ -9,13 +10,14 @@ import { Pattern, PATTERN_CONST } from "./../../../../data/data-pattern";
 })
 export class PatternComponent implements OnInit {
   private highlighted: boolean = false;
-  pattern: Pattern[];
+  pattern: IPattern[];
 
   constructor(private highlightService: HighlightService) { }
 
   ngOnInit(): void {
     this.pattern = PATTERN_CONST;
   }
+  
   ngAfterViewChecked() {
     if (!this.highlighted) {
       this.highlightService.highlightAll();

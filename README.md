@@ -7,7 +7,7 @@ edit `"outputPath": "docs/"`
 
 `git remote add origin https://github.com/tranquangtanqt/index.git`
 
-`ng build --prod --baseHref=”https://tranquangtanqt.github.io/index/”`
+`ng build --prod --baseHref="https://tranquangtanqt.github.io/index/"`
 
 `git add`
 

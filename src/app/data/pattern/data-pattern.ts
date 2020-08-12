@@ -1,10 +1,6 @@
-export interface Pattern {
-	id: number;
-	pattern: String;
-	contentCode: String;
-}
+import { IPattern } from "./../interface";
 
-export const PATTERN_CONST: Pattern[] = [
+export const PATTERN_CONST: IPattern[] = [
 	{
 		id: 1,
 		pattern: `* * * * * 

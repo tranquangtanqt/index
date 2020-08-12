@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/core';
+import { ITableOfContent } from "./../../../data/interface";
 
 @Component({
   selector: 'app-table-of-content',
@@ -6,25 +7,22 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
   styleUrls: ['./table-of-content.component.css']
 })
 export class TableOfContentComponent implements OnInit {
-  showToc: String;
-  text:String;
+  @Input() childDataToc: ITableOfContent[];
   isShow: boolean = false;
   constructor(private eRef: ElementRef	) { }
 
-  ngOnInit(): void {
-  	this.showToc = "toc-show";
-  }
+  ngOnInit(): void {}
 
   @HostListener('document:click', ['$event'])
   clickout(event) {
     if(this.eRef.nativeElement.contains(event.target)) {
-      this.text = "clicked inside";
-      this.showToc = "toc-show";
       this.isShow = true;
     } else {
-      this.text = "clicked outside";
-      this.showToc = "toc-hidden";
       this.isShow = false;
     }
+  }
+
+  scrollTo(param){
+    document.getElementById(param).scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
