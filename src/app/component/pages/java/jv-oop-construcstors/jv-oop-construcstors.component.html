@@ -26,81 +26,17 @@
         <p>- Tên Constructor phải giống với tên lớp của nó.</p>
         <p>- Constructor không có kiểu trả về.</p>
         <p>Ví dụ về Constructor</p>
-		<pre><code class="language-java">public class Vehicle {{ '{' }}
-  private String color;
-  Vehicle() {{ '{' }}
-     color = "Red";
-  {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_1 }}</code></pre>
 		<p>- Phương thức Vehicle () là hàm dựng của lớp, do đó bất cứ khi nào một đối tượng của lớp được tạo ra, thuộc tính color sẽ được đặt thành 'Red'.</p>
 		<p>- Một Constructor cũng có thể lấy các tham số để khởi tạo các thuộc tính.</p>
-		<pre><code class="language-java">public class Vehicle {{ '{' }}
-  private String color;
-  Vehicle(String c) {{ '{' }}
-    color = c;
-  {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_2 }}</code></pre>
 		<p>- Một Constructor được gọi là khi bạn tạo một đối tượng sử dụng từ khoá new.</p>
-		<pre><code class="language-java">public class MyClass {{ '{' }}
-  public static void main(String[ ] args) {{ '{' }}
-    Vehicle v = new Vehicle("Blue");
-  {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_3 }}</code></pre>
 		<p>- Một lớp duy nhất có thể có nhiều Constructor với số lượng các tham số khác nhau.</p>
 		<p>- Các phương thức setter trong các constructor có thể được sử dụng để thiết lập các giá trị thuộc tính.</p>
-		<pre><code class="language-java">public class Vehicle {{ '{' }}
-  private String color;
-
-  Vehicle() {{ '{' }}
-    this.setColor("Red");
-  {{ '}' }}
-  Vehicle(String c) {{ '{' }}
-    this.setColor(c);
-  {{ '}' }}
-
-  // Setter
-  public void setColor(String c) {{ '{' }}
-    this.color = c;
-  {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_4 }}</code></pre>
 		<p>- Lớp trên có hai constructor, một là không có bất kỳ tham số nào thiết lập cho thuộc tính color và nó có một giá trị mặc định là 'Red' và một constructor khác chấp nhận tham số và gán nó cho thuộc tính.</p>
 		<p>Ví dụ:</p>
-		<pre><code class="language-java">public class Vehicle {{ '{' }}
-    private String color;
-    
-    Vehicle() {{ '{' }}
-        this.setColor("Red");
-    {{ '}' }}
-    Vehicle(String c) {{ '{' }}
-        this.setColor(c);
-    {{ '}' }}
-    
-    // Setter
-    public void setColor(String c) {{ '{' }}
-        this.color = c;
-    {{ '}' }}
-    
-    // Getter
-    public String getColor() {{ '{' }}
-        return color;
-    {{ '}' }}
-{{ '}' }}
-
-public class Program {{ '{' }}
-    public static void main(String[] args) {{ '{' }}        
-        //color will be "Red"
-        Vehicle v1 = new Vehicle();
-        
-        //color will be "Green"
-        Vehicle v2 = new Vehicle("Green"); 
-        
-        System.out.println(v2.getColor());
-        
-        //color will be Red and Green 
-        Vehicle v3 = new Vehicle(v1.getColor() + " and " + v2.getColor()); 
-        
-        System.out.println(v3.getColor());
-    {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_5 }}</code></pre>
     </div>
 </div>

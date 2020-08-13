@@ -6300,3 +6300,10 @@ form.dropzone {
 
     /* Custom, iPhone Retina */
     @media only screen and (max-width:320px) {}
+
+    @media only screen and (max-width:575.98px) {
+        .dashboard-header .navbar {
+            max-height: 60px;
+        }
+
+    }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 //------------------------
 // Service
 //------------------------
@@ -16,6 +17,7 @@ import { FooterComponent } from './component/layout/footer/footer.component';
 import { HeaderComponent } from './component/layout/header/header.component';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
 import { HomeIndexComponent } from './component/pages/homepage/home-index/home-index.component';
+import { TableOfContentComponent } from './component/layout/table-of-content/table-of-content.component';
 
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
 //Demo
@@ -42,8 +44,7 @@ import { JvOopAnonymousClassComponent } from './component/pages/java/jv-oop-anon
 import { JvOopInnerClassComponent } from './component/pages/java/jv-oop-inner-class/jv-oop-inner-class.component';
 import { JvOopMethodEqualsComponent } from './component/pages/java/jv-oop-method-equals/jv-oop-method-equals.component';
 import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert/jv-basic-convert.component';
-import { TableOfContentComponent } from './component/layout/table-of-content/table-of-content.component';
-
+import { JvJpaAnotationComponent } from './component/pages/java/jv-jpa-anotation/jv-jpa-anotation.component';
 
 
 @NgModule({
@@ -73,13 +74,14 @@ import { TableOfContentComponent } from './component/layout/table-of-content/tab
     IdeHotkeyVsComponent,
     PtIndexComponent,
     PatternComponent,
-    TableOfContentComponent
+    TableOfContentComponent,
+    JvJpaAnotationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [HighlightService],
+  providers: [HighlightService, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

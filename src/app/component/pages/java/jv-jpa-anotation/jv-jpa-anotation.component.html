@@ -1,0 +1,42 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Các Annotation trong Hibernate</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Các Annotation trong Hibernate</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p id="goto1"><b>1. @Entity</b></p>
+        <p>@Entity được sử dụng để chú thích một class là một Entity.</p>
+        <p>Entity khớp với một bảng lấy theo tên theo thứ tự ưu tiên:</p>
+        <ol>
+        	<li>name trong @Table</li>
+        	<li>name trong @Entity</li>
+        	<li>name trong class</li>
+        </ol>
+        <p>Thuộc tính name của @Entity là không bắt buộc. Việc chỉ định rõ name của @Entity cho phép viết ngắn câu HSQL.</p>
+        <p>Ví dụ trường hợp @Entity chú thích trên class Student không chỉ định rõ phần tử name:</p>
+		<pre><code class="language-java">{{ code.code_1 }}</code></pre>
+		<p>Ví dụ trường hợp @Entity chú thích trên class Student có chỉ định rõ phần name là Student:</p>
+		<pre><code class="language-java">{{ code.code_2 }}</code></pre>
+		<p id="goto2"><b>2. @Table</b></p>
+		<app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
+    </div>
+</div>
+

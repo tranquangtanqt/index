@@ -26,6 +26,7 @@ import { JvOopAnonymousClassComponent } from './component/pages/java/jv-oop-anon
 import { JvOopInnerClassComponent } from './component/pages/java/jv-oop-inner-class/jv-oop-inner-class.component';
 import { JvOopMethodEqualsComponent } from './component/pages/java/jv-oop-method-equals/jv-oop-method-equals.component';
 import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert/jv-basic-convert.component';
+import { JvJpaAnotationComponent } from './component/pages/java/jv-jpa-anotation/jv-jpa-anotation.component';
 
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
@@ -51,6 +52,7 @@ const routes: Routes = [
 			{ path: 'java/oop-inner-class', component: JvOopInnerClassComponent },
 			{ path: 'java/oop-method-equals', component: JvOopMethodEqualsComponent },
 			{ path: 'java/basic-convert', component: JvBasicConvertComponent },
+			{ path: 'java/jpa-anotation', component: JvJpaAnotationComponent },
 
 			//Download
 			{path: 'download', component: DlIndexComponent},

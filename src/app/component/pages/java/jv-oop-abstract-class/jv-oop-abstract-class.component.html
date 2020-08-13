@@ -31,71 +31,14 @@
         <p class="pl-4">- Để sử dụng một lớp trừu tượng, bạn phải kế thừa nó từ một lớp khác.</p>
         <p class="pl-4">- Phương thức abstract sẽ không có định nghĩa, được theo sau bởi dấu chấm phẩy, không có dấu ngoặc móc theo sau.</p>
         <p><b>Ví dụ 1:</b> định nghĩa lớp Animal của chúng ta như là trừu tượng:</p>
-		<pre><code class="language-java">abstract class Animal {{ '{' }}
-  int legs = 0;
-  abstract void makeSound();
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_1 }}</code></pre>
 		<p>Phương thức makeSound cũng là trừu tượng, vì nó không có sự thực hiện trong lớp cha.</p>
 		<p>
 Chúng ta có thể kế thừa từ lớp Animal và xác định phương thức makeSound () cho lớp con:</p>
-		<pre><code class="language-java">class Cat extends Animal {{ '{' }}
-  public void makeSound() {{ '{' }}
-    System.out.println("Meow");
-  {{ '}' }}
-{{ '}' }}</code></pre>
+		<pre><code class="language-java">{{ code.code_2 }}</code></pre>
 		<p>Mỗi Động vật (Animal) tạo ra âm thanh (makeSound), nhưng mỗi con lại có một cách khác để làm điều đó. Đó là lý do tại sao chúng ta định nghĩa một lớp Animal là trừu tượng, và để lại việc thực hiện cách chúng tạo ra âm thanh cho các lớp con.</p>
-		<pre><code class="language-java"></code>abstract class Animal {{ '{' }}
-    int legs = 0;
-    abstract void makeSound();
-{{ '}' }}
-
-class Cat extends Animal {{ '{' }}
-    public void makeSound() {{ '{' }}
-        System.out.println("Meow");
-    {{ '}' }}
-{{ '}' }}
-
-public class Program {{ '{' }}
-    public static void main(String[] args) {{ '{' }}
-        Cat c = new Cat();
-        c.makeSound();
-    {{ '}' }}
-{{ '}' }}
-
-/**********
- * Output
- * Meow
-***********/</pre>
+		<pre><code class="language-java">{{ code.code_3 }}</code></pre>
 		<p><b>Ví dụ 2:</b></p>
-		<pre><code class="language-java">abstract class Shape {{ '{' }}
-    abstract void draw();
-{{ '}' }} 
-
-class Rectangle extends Shape {{ '{' }}
-    void draw() {{ '{' }}
-        System.out.println("Draw Rectangle");
-    {{ '}' }}
-{{ '}' }}
-
-class Traingle extends Shape {{ '{' }}
-    void draw() {{ '{' }}
-        System.out.println("Draw Traingle");
-    {{ '}' }} 
-{{ '}' }} 
-
-class AbstractTest {{ '{' }}
-    public static void main(String args[]) {{ '{' }}
-        Shape s1 = new Rectangle();
-        s1.draw();
-        s1 = new Traingle();
-        s1.draw();
-    {{ '}' }}
-{{ '}' }}
-
-/********************
- * Output
- * Draw Rectangle
- * Draw Traingle
-*********************/</code></pre>
+		<pre><code class="language-java">{{ code.code_4 }}</code></pre>
     </div>
 </div>
