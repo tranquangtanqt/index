@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 //------------------------
 // Service
 //------------------------
@@ -30,21 +30,25 @@ import { IdeHotkeyVsComponent } from './component/pages/ide/ide-hotkey-vs/ide-ho
 //pattern program
 import { PtIndexComponent } from './component/pages/pattern/pt-index/pt-index.component';
 
-//Java
+//Java OOP
 import { JvIndexComponent } from './component/pages/java/jv-index/jv-index.component';
-import { JvOopGetsetComponent } from './component/pages/java/jv-oop-getset/jv-oop-getset.component';
-import { JvOopConstrucstorsComponent } from './component/pages/java/jv-oop-construcstors/jv-oop-construcstors.component';
-import { JvOopEncapsulationComponent } from './component/pages/java/jv-oop-encapsulation/jv-oop-encapsulation.component';
-import { JvOopInheritanceComponent } from './component/pages/java/jv-oop-inheritance/jv-oop-inheritance.component';
-import { JvOopAbstractClassComponent } from './component/pages/java/jv-oop-abstract-class/jv-oop-abstract-class.component';
-import { JvOopPolymorphismComponent } from './component/pages/java/jv-oop-polymorphism/jv-oop-polymorphism.component';
-import { JvOopInterfacesComponent } from './component/pages/java/jv-oop-interfaces/jv-oop-interfaces.component';
-import { JvOopOverloadingOverridingComponent } from './component/pages/java/jv-oop-overloading-overriding/jv-oop-overloading-overriding.component';
-import { JvOopAnonymousClassComponent } from './component/pages/java/jv-oop-anonymous-class/jv-oop-anonymous-class.component';
-import { JvOopInnerClassComponent } from './component/pages/java/jv-oop-inner-class/jv-oop-inner-class.component';
-import { JvOopMethodEqualsComponent } from './component/pages/java/jv-oop-method-equals/jv-oop-method-equals.component';
+import { JvOopGetsetComponent } from './component/pages/java/oop/jv-oop-getset/jv-oop-getset.component';
+import { JvOopConstrucstorsComponent } from "./component/pages/java/oop/jv-oop-construcstors/jv-oop-construcstors.component";
+import { JvOopEncapsulationComponent } from "./component/pages/java/oop/jv-oop-encapsulation/jv-oop-encapsulation.component";
+import { JvOopInheritanceComponent } from './component/pages/java/oop/jv-oop-inheritance/jv-oop-inheritance.component';
+import { JvOopAbstractClassComponent } from './component/pages/java/oop/jv-oop-abstract-class/jv-oop-abstract-class.component';
+import { JvOopPolymorphismComponent } from './component/pages/java/oop/jv-oop-polymorphism/jv-oop-polymorphism.component';
+import { JvOopInterfacesComponent } from "./component/pages/java/oop/jv-oop-interfaces/jv-oop-interfaces.component";
+import { JvOopOverloadingOverridingComponent } from './component/pages/java/oop/jv-oop-overloading-overriding/jv-oop-overloading-overriding.component';
+import { JvOopAnonymousClassComponent } from './component/pages/java/oop/jv-oop-anonymous-class/jv-oop-anonymous-class.component';
+import { JvOopInnerClassComponent } from "./component/pages/java/oop/jv-oop-inner-class/jv-oop-inner-class.component";
+import { JvOopMethodEqualsComponent } from "./component/pages/java/oop/jv-oop-method-equals/jv-oop-method-equals.component";
+
 import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert/jv-basic-convert.component';
-import { JvJpaAnotationComponent } from './component/pages/java/jv-jpa-anotation/jv-jpa-anotation.component';
+// Java IPA
+import { JvJpaAnotationComponent } from './component/pages/java/jpa/jv-jpa-annotation/jv-jpa-annotation.component';//index
+import { JvJpaEntityComponent } from './component/pages/java/jpa/jv-jpa-entity/jv-jpa-entity.component';
+import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component'; 
 
 
 @NgModule({
@@ -75,13 +79,15 @@ import { JvJpaAnotationComponent } from './component/pages/java/jv-jpa-anotation
     PtIndexComponent,
     PatternComponent,
     TableOfContentComponent,
-    JvJpaAnotationComponent
+    JvJpaAnotationComponent,
+    JvJpaEntityComponent,
+    JvJpaH2ConnectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [HighlightService, {provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

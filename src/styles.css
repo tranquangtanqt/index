@@ -139,6 +139,11 @@
 /* HIGHLIGHTJS
 ========================================================================== */
 
+code[class*="language-"], 
+pre[class*="language-"] {
+    font-size: 12px;
+}
+
 pre {
   display: flex;
   margin-top: 0;
@@ -192,11 +197,10 @@ td.hljs-ln-numbers {
   padding-left: 8px !important;
 }
 
-  /* for block of code */
+/* for block of code */
 td.hljs-ln-code {
   padding-left: 8px !important;
 }
-
 
 body {
     font-family: 'arial,sans-serif!important';
