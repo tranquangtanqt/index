@@ -16,3 +16,12 @@ export interface IPattern {
 	pattern: String;
 	contentCode: String;
 }
+
+export interface IWords {
+	id: number;
+	audio? : String;
+	hiragana?: String;
+	roumaji?: String;
+	kanji?: String;
+	meaning?: String;
+}

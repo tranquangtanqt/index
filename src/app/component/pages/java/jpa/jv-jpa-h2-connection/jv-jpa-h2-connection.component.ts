@@ -179,6 +179,11 @@ public class Book implements Serializable {
     public void setPrice(long price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Book: [id=" + id + ", title=" + title + ", author=" + author + ", price =" + price + "]";
+    }
 }`,
     code_4: `<?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1"
@@ -237,11 +242,7 @@ public class Main {
     public static void main(String[] args) {
         List<Book> list = Util.testGetData();
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("Book " + i);
-            System.out.println("  id:" + list.get(i).getId());
-            System.out.println("  title: " + list.get(i).getTitle());
-            System.out.println("  author" + list.get(i).getAuthor());
-            System.out.println("  price" + list.get(i).getPrice());
+            System.out.println(list.get(i).toString());
         }
     }
 }`

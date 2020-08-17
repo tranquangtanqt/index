@@ -1,7 +1,7 @@
 #first .card {
 	margin-bottom: 10px;
 }
-#first #list5 { 
+/*#first #list5 { 
 	color:#eee; background-color: black;
 }
 #first #list5 ol { 
@@ -9,7 +9,7 @@
 }
 
 #first #list5 ol li ol { 
-	list-style-image: url("/assets/images/pages/nested.png"); 
+	list-style-image: url("assets/images/pages/nested.png"); 
 	padding:5px 0 5px 18px; font-size:15px; 
 }
 
@@ -17,12 +17,12 @@
 	color:#bfe1f1; 
 	text-decoration: none;
 }
-
+*/
 #first .listol { 
 	color:#eee;
 }
 #first .listol ol { 
-	list-style-image: url("/assets/images/pages/nested.png");
+	/*list-style-image: url(/assets/images/pages/nested.png);*/
 	padding:5px 0 5px 18px; font-size:15px;
 }
 #first .listol ol li a{ 
