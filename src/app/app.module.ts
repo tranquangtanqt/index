@@ -22,6 +22,7 @@ import { TableOfContentComponent } from './component/layout/table-of-content/tab
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
 //Demo
 import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
+import { DemojapanComponent } from './component/pages/demo/demojapan/demojapan.component';
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
 //IDE 
@@ -48,7 +49,8 @@ import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert
 // Java IPA
 import { JvJpaAnotationComponent } from './component/pages/java/jpa/jv-jpa-annotation/jv-jpa-annotation.component';//index
 import { JvJpaEntityComponent } from './component/pages/java/jpa/jv-jpa-entity/jv-jpa-entity.component';
-import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component'; 
+import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component';
+
 
 
 @NgModule({
@@ -81,7 +83,8 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
     TableOfContentComponent,
     JvJpaAnotationComponent,
     JvJpaEntityComponent,
-    JvJpaH2ConnectionComponent
+    JvJpaH2ConnectionComponent,
+    DemojapanComponent
   ],
   imports: [
     BrowserModule,

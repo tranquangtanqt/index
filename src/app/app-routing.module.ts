@@ -6,6 +6,7 @@ import { HomeIndexComponent } from './component/pages/homepage/home-index/home-i
 //Demo
 import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
+import { DemojapanComponent } from './component/pages/demo/demojapan/demojapan.component';
 //IDE
 import { IdeIndexComponent } from './component/pages/ide/ide-index/ide-index.component';
 import { IdeHotkeyVsComponent } from './component/pages/ide/ide-hotkey-vs/ide-hotkey-vs.component';
@@ -74,6 +75,8 @@ const routes: Routes = [
 			
 			//demo
 			{path: 'demo-pattern', component: PatternComponent},
+			{path: 'demo-japan', component: DemojapanComponent},
+
 		]
 	},
 	// {path: '**', redirectTo: ''}
