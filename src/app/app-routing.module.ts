@@ -7,6 +7,9 @@ import { HomeIndexComponent } from './component/pages/homepage/home-index/home-i
 import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
 import { DemojapanComponent } from './component/pages/demo/demojapan/demojapan.component';
+import { DemoComponent } from './component/pages/demo/demo/demo.component';
+import { DemocallComponent } from './component/pages/demo/democall/democall.component';
+
 //IDE
 import { IdeIndexComponent } from './component/pages/ide/ide-index/ide-index.component';
 import { IdeHotkeyVsComponent } from './component/pages/ide/ide-hotkey-vs/ide-hotkey-vs.component';
@@ -34,6 +37,10 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
 
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
+
+// Japan
+import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
+import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
 const routes: Routes = [
 	{
@@ -72,10 +79,17 @@ const routes: Routes = [
 			
 			//libraryAngular
 			{path: 'prism', component: LibPrismComponent},
+			//Japan
+			{path: 'japan', component: JpIndexComponent},
+			{path: 'japan/vocabulary/:unitNumber', component: JpVocabularyComponent},
 			
 			//demo
 			{path: 'demo-pattern', component: PatternComponent},
 			{path: 'demo-japan', component: DemojapanComponent},
+			
+			{path: 'demo/call', component: DemocallComponent},
+			{path: 'demo/demo', component: DemoComponent},
+			{path: 'demo/demo/:id', component: DemoComponent}
 
 		]
 	},

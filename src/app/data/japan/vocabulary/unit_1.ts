@@ -1,4 +1,4 @@
-import { IWords } from "./../interface";
+import { IWords } from "./../../interface";
 
 export const NEW_WORD_UNIT_1: IWords [] = [
 	{

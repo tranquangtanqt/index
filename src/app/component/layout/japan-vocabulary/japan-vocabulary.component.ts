@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { IWords } from "./../../../../data/interface";
-import { NEW_WORD_UNIT_1 } from "./../../../../data/japan/vocabulary/unit_1";
+import { Component, OnInit, Input } from '@angular/core';
+import { IWords } from "./../../../data/interface";
+
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-demojapan',
-  templateUrl: './demojapan.component.html',
-  styleUrls: ['./demojapan.component.css']
+  selector: 'app-japan-vocabulary',
+  templateUrl: './japan-vocabulary.component.html',
+  styleUrls: ['./japan-vocabulary.component.css']
 })
-export class DemojapanComponent implements OnInit {
-  data: IWords [];
+export class JapanVocabularyComponent implements OnInit {
+  @Input() data: IWords[];
+  @Input() unitNumber: number;
+  // data: IWords [];
   /* chi so cau tra loi dung */
   indexAnswer: number = 0;
   /* Mang chua cau tra loi */
@@ -29,12 +31,10 @@ export class DemojapanComponent implements OnInit {
   /* So cau sai */
   scoreWrong: number = 0;
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   	this.arrAnswer = new Array();
-  	this.data = NEW_WORD_UNIT_1;
   	this.show = false;
   	this.makeAnswer();
   }
@@ -43,7 +43,7 @@ export class DemojapanComponent implements OnInit {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
 	  	[a[i], a[j]] = [a[j], a[i]];
-      }
+    }
     return a;
   }
 
@@ -89,4 +89,5 @@ export class DemojapanComponent implements OnInit {
   	}
   }
 
+ 
 }

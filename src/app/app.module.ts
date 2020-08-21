@@ -23,6 +23,8 @@ import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/li
 //Demo
 import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 import { DemojapanComponent } from './component/pages/demo/demojapan/demojapan.component';
+import { DemoComponent } from './component/pages/demo/demo/demo.component';
+import { DemocallComponent } from './component/pages/demo/democall/democall.component';
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
 //IDE 
@@ -50,6 +52,14 @@ import { JvBasicConvertComponent } from './component/pages/java/jv-basic-convert
 import { JvJpaAnotationComponent } from './component/pages/java/jpa/jv-jpa-annotation/jv-jpa-annotation.component';//index
 import { JvJpaEntityComponent } from './component/pages/java/jpa/jv-jpa-entity/jv-jpa-entity.component';
 import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component';
+
+import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
+//Japan
+import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
+import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
+
+
+
 
 
 
@@ -84,7 +94,12 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
     JvJpaAnotationComponent,
     JvJpaEntityComponent,
     JvJpaH2ConnectionComponent,
-    DemojapanComponent
+    DemojapanComponent,
+    JpVocabularyComponent,
+    JapanVocabularyComponent,
+    DemoComponent,
+    JpIndexComponent,
+    DemocallComponent,
   ],
   imports: [
     BrowserModule,
