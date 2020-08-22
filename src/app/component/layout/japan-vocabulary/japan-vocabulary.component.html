@@ -70,25 +70,44 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="row" *ngIf="flagAnswerCorrect">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div class="card text-white bg-success mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ data[indexAnswer].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" *ngIf="flagAnswerWrong">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div class="card text-white bg-danger mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ data[indexAnswer].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-xl-4">
 				<div class="row">
-					<div class="col-md-4 col-lg-4 col-xl-4">
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
 						<div class="card text-white bg-success mb-3">
 							<div class="card-body">
 								<p class="card-text text-center"><b>{{ scoreCorrect }}</b></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-lg-4 col-xl-4">
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
 						<div class="card text-white bg-danger mb-3">
 							<div class="card-body">
 								<p class="card-text text-center"><b>{{ scoreWrong }}</b></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-lg-4 col-xl-4">
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
 						<div class="card text-white bg-info mb-3">
 							<div class="card-body">
 								<p class="card-text text-center"><b>{{ percenCorrect }}%</b></p>
