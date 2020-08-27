@@ -35,6 +35,13 @@ import { JvJpaAnotationComponent } from './component/pages/java/jpa/jv-jpa-annot
 import { JvJpaEntityComponent } from './component/pages/java/jpa/jv-jpa-entity/jv-jpa-entity.component';
 import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component'; 
 
+//Java Spring
+import { SprBeginComponent } from './component/pages/java/spring/spr-begin/spr-begin.component';
+
+//Javascript
+import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
+import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic-on-onclick/js-basic-on-onclick.component';
+
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
 
@@ -67,6 +74,12 @@ const routes: Routes = [
 			{ path: 'java/jpa-anotation', component: JvJpaAnotationComponent },
 			{ path: 'java/jpa-anotation/entity', component: JvJpaEntityComponent },
 			{ path: 'java/jpa-h2-connection', component: JvJpaH2ConnectionComponent },
+			//Spring
+			{ path: 'java/spring-begin', component: SprBeginComponent },
+
+			//Javascript
+			{ path: 'javascript', component: JsIndexComponent },
+			{ path: 'javascript/basic-click-and-on-click', component: JsBasicOnOnclickComponent },
 
 			//Download
 			{path: 'download', component: DlIndexComponent},
@@ -88,6 +101,7 @@ const routes: Routes = [
 			{path: 'demo-japan', component: DemojapanComponent},
 			
 			{path: 'demo/call', component: DemocallComponent},
+
 			{path: 'demo/demo', component: DemoComponent},
 			{path: 'demo/demo/:id', component: DemoComponent}
 

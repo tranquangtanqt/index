@@ -53,8 +53,15 @@ import { JvJpaAnotationComponent } from './component/pages/java/jpa/jv-jpa-annot
 import { JvJpaEntityComponent } from './component/pages/java/jpa/jv-jpa-entity/jv-jpa-entity.component';
 import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2-connection/jv-jpa-h2-connection.component';
 
-import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
+// Java Spring
+import { SprBeginComponent } from './component/pages/java/spring/spr-begin/spr-begin.component';
+
+//Javascript
+import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
+import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic-on-onclick/js-basic-on-onclick.component';
+
 //Japan
+import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
 import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
@@ -100,6 +107,9 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
     DemoComponent,
     JpIndexComponent,
     DemocallComponent,
+    JsIndexComponent,
+    JsBasicOnOnclickComponent,
+    SprBeginComponent,
   ],
   imports: [
     BrowserModule,

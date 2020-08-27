@@ -16,6 +16,7 @@ export class JvBasicConvertComponent implements OnInit {
   ngOnInit(): void {
     this.dataToc = TABLE_OF_CONTENT;
   }
+  
   ngAfterViewChecked() {
     if (!this.highlighted) {
       this.highlightService.highlightAll();
