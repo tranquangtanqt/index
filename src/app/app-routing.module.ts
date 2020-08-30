@@ -37,6 +37,7 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
 
 //Java Spring
 import { SprBeginComponent } from './component/pages/java/spring/spr-begin/spr-begin.component';
+import { SprSelectDataHibernateH2Component } from './component/pages/java/spring/spr-select-data-hibernate-h2/spr-select-data-hibernate-h2.component';
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -76,6 +77,7 @@ const routes: Routes = [
 			{ path: 'java/jpa-h2-connection', component: JvJpaH2ConnectionComponent },
 			//Spring
 			{ path: 'java/spring-begin', component: SprBeginComponent },
+			{ path: 'java/spring-select-data-hibernate-h2-database', component: SprSelectDataHibernateH2Component },
 
 			//Javascript
 			{ path: 'javascript', component: JsIndexComponent },

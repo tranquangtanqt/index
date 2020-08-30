@@ -55,6 +55,8 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
 
 // Java Spring
 import { SprBeginComponent } from './component/pages/java/spring/spr-begin/spr-begin.component';
+import { SprSelectDataHibernateH2Component } from './component/pages/java/spring/spr-select-data-hibernate-h2/spr-select-data-hibernate-h2.component';
+
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -64,7 +66,6 @@ import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic
 import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
 import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
-
 
 
 
@@ -110,6 +111,7 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
     JsIndexComponent,
     JsBasicOnOnclickComponent,
     SprBeginComponent,
+    SprSelectDataHibernateH2Component,
   ],
   imports: [
     BrowserModule,
