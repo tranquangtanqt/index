@@ -56,7 +56,9 @@ import { JvJpaH2ConnectionComponent } from './component/pages/java/jpa/jv-jpa-h2
 // Java Spring
 import { SprBeginComponent } from './component/pages/java/spring/spr-begin/spr-begin.component';
 import { SprSelectDataHibernateH2Component } from './component/pages/java/spring/spr-select-data-hibernate-h2/spr-select-data-hibernate-h2.component';
-
+import { SprInsertDataHibernateH2Component } from './component/pages/java/spring/spr-insert-data-hibernate-h2/spr-insert-data-hibernate-h2.component';
+import { SprUpdateDataHibernateH2Component } from './component/pages/java/spring/spr-update-data-hibernate-h2/spr-update-data-hibernate-h2.component';
+import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring/spr-delete-data-hibernate-h2/spr-delete-data-hibernate-h2.component';
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -66,9 +68,6 @@ import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic
 import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
 import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
-
-
-
 
 
 @NgModule({
@@ -112,6 +111,9 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
     JsBasicOnOnclickComponent,
     SprBeginComponent,
     SprSelectDataHibernateH2Component,
+    SprInsertDataHibernateH2Component,
+    SprUpdateDataHibernateH2Component,
+    SprDeleteDataHibernateH2Component,
   ],
   imports: [
     BrowserModule,

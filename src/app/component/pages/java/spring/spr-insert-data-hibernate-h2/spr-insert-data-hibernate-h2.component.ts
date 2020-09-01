@@ -3,12 +3,12 @@ import { HighlightService } from "./../../../../../services/highlight/highlight.
 import { ITableOfContent } from "./../../../../../data/interface";
 
 @Component({
-  selector: 'app-spr-select-data-hibernate-h2',
-  templateUrl: './spr-select-data-hibernate-h2.component.html',
-  styleUrls: ['./spr-select-data-hibernate-h2.component.css']
+  selector: 'app-spr-insert-data-hibernate-h2',
+  templateUrl: './spr-insert-data-hibernate-h2.component.html',
+  styleUrls: ['./spr-insert-data-hibernate-h2.component.css']
 })
-export class SprSelectDataHibernateH2Component implements OnInit {
-  private highlighted: boolean = false;
+export class SprInsertDataHibernateH2Component implements OnInit {
+	private highlighted: boolean = false;
   code: any;
   dataToc: ITableOfContent [];
 
@@ -25,7 +25,6 @@ export class SprSelectDataHibernateH2Component implements OnInit {
       this.highlighted = true;
     }
   }
-
 }
 
 export const TABLE_OF_CONTENT : ITableOfContent [] = [
@@ -85,7 +84,7 @@ export const TABLE_OF_CONTENT : ITableOfContent [] = [
 ];
 
 export const CODE = {
-  code_1: `<?xml version="1.0" encoding="UTF-8"?>
+	code_1: `<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -400,20 +399,17 @@ INSERT INTO TBL_BOOK (id, title, isbn, publisher) VALUES
   (3, 'title_3', 'isbn_3', 'publisher_3');`,
   code_6: `package com.learnspring.springwebapp.dao;
 
-import java.util.List;
-
 import com.learnspring.springwebapp.entity.Book;
 
 public interface BookDao {
-	List<Book> getListBookDao();
+	int insertBookDao(Book book);
 }`,
 	code_7: `package com.learnspring.springwebapp.dao.impl;
-
-import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
@@ -426,25 +422,34 @@ public class BookDaoImpl implements BookDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	@SuppressWarnings("unchecked")
 	@Override
-	public List<Book> getListBookDao() {
-		Query query = entityManager.createQuery("SELECT b FROM Book b");
-		return query.getResultList();
+	@Transactional
+	public int insertBookDao(Book book) {
+		int rs = 0;
+		StringBuilder sql = new StringBuilder();
+		sql.append("INSERT INTO TBL_BOOK (id, title, isbn, publisher) VALUES (?, ?, ?, ?)");
+		try {
+			Query query = entityManager.createNativeQuery(sql.toString());
+			query.setParameter(1, book.getId());
+			query.setParameter(2, book.getTitle());
+			query.setParameter(3, book.getIsbn());
+			query.setParameter(4, book.getPublisher());
+			rs = query.executeUpdate();
+		} catch (Exception e) {
+			System.err.println(e.toString());
+		}
+		
+		return rs;
 	}
 }`,
 	code_8: `package com.learnspring.springwebapp.service;
 
-import java.util.List;
-
 import com.learnspring.springwebapp.entity.Book;
 
 public interface BookService {
-	List<Book> getListBook();
+	int insertBook(Book book);
 }`,
 	code_9: `package com.learnspring.springwebapp.service.impl;
-
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -460,17 +465,13 @@ public class BookServiceImpl implements BookService {
 	BookDao bookDao;
 
 	@Override
-	public List<Book> getListBook() {
-		return bookDao.getListBookDao();
+	public int insertBook(Book book) {
+		return bookDao.insertBookDao(book);
 	}
 }`,
 	code_10: `package com.learnspring.springwebapp.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -484,10 +485,14 @@ public class BookController {
 	@Autowired
 	private BookService bookService;
 	
-	@RequestMapping(value = "/listbook", method = RequestMethod.GET)
-	public ResponseEntity<List<Book>> listBook(){
-		List<Book> listBook = bookService.getListBook();
-		return new ResponseEntity<List<Book>>(listBook, HttpStatus.OK);
+	@RequestMapping(value = "/insertbook", method = RequestMethod.GET)
+	public int insertBook(){
+		Book book = new Book();
+		book.setId(4L);
+		book.setTitle("new_title");
+		book.setIsbn("new_isbn");
+		book.setPublisher("new_publisher");
+		return bookService.insertBook(book);
 	}
 }`,
 	code_11: `package com.learnspring.springwebapp;
@@ -503,4 +508,3 @@ public class SpringwebappApplication {
 	}
 }`
 }
-

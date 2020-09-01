@@ -4,13 +4,13 @@
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="page-header">
-            <h2 class="pageheader-title">Select dữ liệu với hibernate, h2 database</h2>
+            <h2 class="pageheader-title">Update dữ liệu với hibernate, h2 database</h2>
             <div class="page-breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Select dữ liệu với hibernate, h2 database</li>
+                        <li class="breadcrumb-item active" aria-current="page">Update dữ liệu với hibernate, h2 database</li>
                     </ol>
                 </nav>
             </div>
@@ -74,17 +74,23 @@
 
      	<!-- 13. Kết quả khi chạy chương trình -->
      	<p id="goto13"><b>{{ dataToc[12].id }}. {{ dataToc[12].title }}</b></p>
-     	<p><i>H2 database console</i></p>
-        <div class="pl-5 pb-3">
+     	<p><i>Dữ liệu H2 database trước khi update</i></p>
+     	<div class="pl-5 pb-3">
         	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-1.jpg" alt="" style="width: 60%;">
         </div>
      	<div class="pl-5 pb-3">
         	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-2.jpg" alt="" style="width: 60%;">
         </div>
-        <p><i>http://localhost:9090/listbook</i></p>
-        <div class="pl-5 pb-3">
-        	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-3.jpg" alt="" style="width: 100%;">
+
+        <p><i>http://localhost:9090/updatebook</i></p>
+     	<div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-update-data-hibernate-h2-database.jpg" alt="" style="width: 100%;">
         </div>
+        <p><i>Dữ liệu H2 database sau khi update</i></p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-update-data-hibernate-h2-database-1.jpg" alt="" style="width: 60%;">
+        </div>
+        
         <app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
     </div>
 </div>
