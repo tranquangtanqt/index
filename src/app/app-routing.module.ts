@@ -53,6 +53,14 @@ import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.c
 import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
+//CSS
+import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
+import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
+import { CssImageOverlayHoverEffectsComponent } from './component/pages/css/css-image-overlay-hover-effects/css-image-overlay-hover-effects.component';
+import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text-on-hover/css-skew-text-on-hover.component';
+import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
+
+
 const routes: Routes = [
 	{
 		path: '',
@@ -88,6 +96,13 @@ const routes: Routes = [
 			//Javascript
 			{ path: 'javascript', component: JsIndexComponent },
 			{ path: 'javascript/basic-click-and-on-click', component: JsBasicOnOnclickComponent },
+
+			//CSS
+			{ path: 'css', component: CssIndexComponent },
+			{ path: 'css/20170115-spin-text-on-mouse-hover', component: CssSpinTextOnMouseHoverComponent },
+			{ path: 'css/20170121-css-image-overlay-hover-effects', component: CssImageOverlayHoverEffectsComponent },
+			{ path: 'css/20170121-skew-text-on-hover', component: CssSkewTextOnHoverComponent },
+			{ path: 'css/20170121-3d-text-on-hover', component: Css3dTextOnHoverComponent },
 
 			//Download
 			{path: 'download', component: DlIndexComponent},

@@ -69,6 +69,13 @@ import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-
 import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
+//CSS
+import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
+import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
+import { CssImageOverlayHoverEffectsComponent } from './component/pages/css/css-image-overlay-hover-effects/css-image-overlay-hover-effects.component';
+import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text-on-hover/css-skew-text-on-hover.component';
+import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
+
 
 @NgModule({
   declarations: [
@@ -114,6 +121,11 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
     SprInsertDataHibernateH2Component,
     SprUpdateDataHibernateH2Component,
     SprDeleteDataHibernateH2Component,
+    CssIndexComponent,
+    CssSpinTextOnMouseHoverComponent,
+    CssImageOverlayHoverEffectsComponent,
+    CssSkewTextOnHoverComponent,
+    Css3dTextOnHoverComponent,
   ],
   imports: [
     BrowserModule,
