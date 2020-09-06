@@ -16,7 +16,7 @@ export class SprDeleteDataHibernateH2Component implements OnInit {
 
   ngOnInit(): void {
   	this.code = CODE;
-	 	this.dataToc = TABLE_OF_CONTENT;
+ 	this.dataToc = TABLE_OF_CONTENT;
   }
 
   ngAfterViewChecked() {

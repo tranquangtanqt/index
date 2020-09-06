@@ -45,6 +45,9 @@ import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
 import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic-on-onclick/js-basic-on-onclick.component';
+import { JsArrayComponent } from './component/pages/javascript/js-array/js-array.component';
+
+import { JsAngularNgrxComponent } from './component/pages/javascript/js-angular-ngrx/js-angular-ngrx.component';
 
 //Download
 import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.component';
@@ -59,6 +62,7 @@ import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin
 import { CssImageOverlayHoverEffectsComponent } from './component/pages/css/css-image-overlay-hover-effects/css-image-overlay-hover-effects.component';
 import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text-on-hover/css-skew-text-on-hover.component';
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
+import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 
 
 const routes: Routes = [
@@ -96,6 +100,8 @@ const routes: Routes = [
 			//Javascript
 			{ path: 'javascript', component: JsIndexComponent },
 			{ path: 'javascript/basic-click-and-on-click', component: JsBasicOnOnclickComponent },
+			{ path: 'javascript/array', component: JsArrayComponent },
+			{ path: 'javascript/angular-ngrx', component: JsAngularNgrxComponent },
 
 			//CSS
 			{ path: 'css', component: CssIndexComponent },
@@ -103,6 +109,7 @@ const routes: Routes = [
 			{ path: 'css/20170121-css-image-overlay-hover-effects', component: CssImageOverlayHoverEffectsComponent },
 			{ path: 'css/20170121-skew-text-on-hover', component: CssSkewTextOnHoverComponent },
 			{ path: 'css/20170121-3d-text-on-hover', component: Css3dTextOnHoverComponent },
+			{ path: 'css/20170122-css-image-hover-effects', component: CssImageHoverEffects1Component },
 
 			//Download
 			{path: 'download', component: DlIndexComponent},

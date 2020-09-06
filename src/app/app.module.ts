@@ -63,6 +63,9 @@ import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
 import { JsBasicOnOnclickComponent } from './component/pages/javascript/js-basic-on-onclick/js-basic-on-onclick.component';
+import { JsArrayComponent } from './component/pages/javascript/js-array/js-array.component';
+
+import { JsAngularNgrxComponent } from './component/pages/javascript/js-angular-ngrx/js-angular-ngrx.component';
 
 //Japan
 import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
@@ -75,6 +78,8 @@ import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin
 import { CssImageOverlayHoverEffectsComponent } from './component/pages/css/css-image-overlay-hover-effects/css-image-overlay-hover-effects.component';
 import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text-on-hover/css-skew-text-on-hover.component';
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
+import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
+import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
 
 
 @NgModule({
@@ -126,6 +131,10 @@ import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-h
     CssImageOverlayHoverEffectsComponent,
     CssSkewTextOnHoverComponent,
     Css3dTextOnHoverComponent,
+    CssImageHoverEffects1Component,
+    Css3dCardFlipAnimationComponent,
+    JsArrayComponent,
+    JsAngularNgrxComponent,
   ],
   imports: [
     BrowserModule,

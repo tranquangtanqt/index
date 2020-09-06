@@ -1,0 +1,274 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Array</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/javascript']" class="breadcrumb-link">Javascript</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Array</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<table class="table table-bordered table-hover table-striped table-responsive">
+			<thead>
+				<tr class="table-danger">
+					<th>Tên phương thức</th>
+                    <th>Chức năng</th>
+                    <th>Ví dụ</th>
+				</tr>
+			</thead>
+			<tbody>
+			 	<tr class="table-success" id="goto1">
+                    <td scope="row">concat()</td>
+                    <td>
+                        <p>Trả về một mảng mới bao gồm mảng này kết hợp với các mảng khác và/hoặc giá trị khác.</p>
+                        <p><i>arr1.concat(arr2, arr3, ..., arrX)</i> </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_1 }}</code></pre></td>
+				</tr>
+				<tr class="table-primary" id="goto2">
+                    <td scope="row">copyWithin()</td>
+                    <td>Ghi đè các phần tử nó sao chép được lên các phần tử của mảng tính từ một vị trí xác định bởi người dùng.
+                        <p><i>array.copyWithin(target, start, end) </i><br>+ target là vị trí mà hàm sẽ bắt đầu ghi đè các phần tử sao chép được. <br> + start là vị trí bắt đầu sao chép. <br>+ end là vị trí kết thúc sao chép.
+                        </p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_2 }}</code></pre></td>
+                </tr>
+             	<tr class="table-success" id="goto3">
+                    <td scope="row">fill()</td>
+                    <td>
+                        <p>Thay thế các phần tử trong một mảng từ vị trí start đến vị trí end với một giá trị value</p>
+                        <p><i>arr.fill(value, start, end)</i></p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_3 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto4">
+                    <td scope="row">filter()</td>
+                    <td>
+                        <p>Tạo một mảng mới với tất cả các phần tử của mảng này, mà hàm lọc đã cho trả về true.</p>
+                    </td>
+                	<td><pre><code class="language-javascript">{{ code.code_4 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto5">
+                    <td scope="row">find()</td>
+                    <td>
+                        <p>Trả về giá trị của phần tử đầu tiên trong mảng thỏa mãn được điều kiện kiểm tra</p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_5 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto6">
+                    <td scope="row">findIndex()</td>
+                    <td>
+                        <p>Trả về chỉ mục đầu tiên (thấp nhất) của một phần tử trong mảng tương đương với giá trị đã cho, hoặc -1 nếu không được tìm thấy.</p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_6 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto7">
+                    <td scope="row">forEach()</td>
+                    <td>
+                        <p>Truyền lần lượt các phần tử của mảng vào một hàm được cung câp trước đó, hàm này sẽ tiến hành xử lý các thành phần tử cửa mảng như là một tham số truyền vào</p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_7 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto8">
+                    <td scope="row">from()</td>
+                    <td>
+                        <p>Trả về đối tượng Array từ bất kỳ đối tượng nào có thuộc tính length hoặc đối tượng có thể lặp lại.(Điển hình: trả về một mảng char từ 1 string)</p>
+                        <p><i>Array.from(object, mapFunction, thisValue)</i></p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_8 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto9">
+                    <td scope="row">includes()</td>
+                    <td>
+                        <p>Kiểm tra xem một mảng có chứa phần tử element hay không</p>
+                        <p>
+                            <i> array.includes(element, start)</i>
+                        </p>
+                    </td>
+                	<td><pre><code class="language-javascript">{{ code.code_9 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto10">
+                    <td scope="row">indexOf()</td>
+                    <td>
+                        <p>
+                            Trả về chỉ mục đầu tiên (thấp nhất) của một phần tử trong mảng tương đương với giá trị đã cho, hoặc -1 nếu không được tìm thấy.
+                        </p>
+                        <p>
+                            <i>arr.indexOf(item, start)</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_10 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto11">
+                    <td scope="row">isArray()</td>
+                    <td>
+                        <p>Kiểm tra một đối tượng có phải là một mảng hay không</p>
+                        <p>
+                            <i>Array.isArray(obj)</i>
+                        </p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr class="table-primary" id="goto12">
+                    <td scope="row">join()</td>
+                    <td>
+                        <p>Nối các phần tử của mảng thành một chuỗi, các phần tử được ngăn cách nhau bởi kí tự do người dùng quy định, mặc định là dấu ",".</p>
+                        <p>
+                            <i>arr.join(separator)</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_11 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto13">
+                    <td scope="row">lastIndexOf()</td>
+                    <td>
+                        <p>Trả về chỉ mục cuối cùng (lớn nhất) của một phần tử trong mảng tương đương với giá trị đã cho, hoặc -1 nếu không được tìm thấy.</p>
+                        <p>
+                            <i>arr.lastIndexOf(item, start)</i>
+                        </p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_12 }}</code></pre></td>
+             	</tr>
+             	<tr class="table-primary" id="goto14">
+                    <td scope="row">map()</td>
+                    <td>
+                        <p>Tạo một mảng mới với các kết quả của việc gọi một hàm đã cho trên mỗi phần tử của mảng này.</p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_13 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto15">
+                    <td scope="row">pop()</td>
+                    <td>
+                        <p>Gỡ bỏ phần tử cuối cùng từ một mảng và trả về phần tử đó.</p>
+                        <p>
+                            <i>arr.pop()</i>
+                        </p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_14 }}</code></pre></td>
+                 </tr>
+                 <tr class="table-primary" id="goto16">
+                    <td scope="row">push()</td>
+                    <td>
+                        <p>Thêm một hoặc nhiều phần tử tới phần cuối của một mảng và trả về độ dài mới của mảng.</p>
+                        <p>
+                            <i>array.push(item1, item2, ..., itemX)</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_15 }}</code></pre></td>
+                </tr>
+             	<tr class="table-success" id="goto17">
+                    <td scope="row">reduce()</td>
+                    <td>
+                        <p>Áp dụng một hàm đồng thời với hai giá trị của mảng (từ trái qua phải) khi để giảm nó tới một giá trị đơn.</p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_16 }}</code></pre></td>
+             	</tr>
+             	<tr class="table-primary" id="goto18">
+                    <td scope="row">reduceRight()</td>
+                    <td>
+                        <p>Áp dụng một hàm đồng thời với hai giá trị của mảng (từ phải qua trái) khi để giảm nó tới một giá trị đơn.</p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_17 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto19">
+                    <td scope="row">reverse()</td>
+                    <td>
+                        <p>Đảo ngược thứ tự của các phần tử của một mảng – Đầu tiên trở thành cuối cùng và cuối cùng trở thành đầu tiên.</p>
+                        <p>
+                            <i>arr.reverse()</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_18 }}</code></pre></td>
+                </tr>
+             	<tr class="table-primary" id="goto20">
+                    <td scope="row">shift()</td>
+                    <td>
+                        <p>Gỡ bỏ phần tử đầu tiên từ một mảng và trả về phần tử đó.</p>
+                        <p>
+                            <i>arr.shift()</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_19 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto21">
+                    <td scope="row">slice()</td>
+                    <td>
+                        <p>Extract – trích một đoạn của một mảng từ vị trí begin đến cuối (hoặc end) và trả về một mảng mới.</p>
+                        <p>
+                            <i>arr.slice( begin [,end] );</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_20 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto22">
+                    <td scope="row">some()</td>
+                    <td>
+                        <p>Trả về true nếu có ít nhất một phần tử trong mảng này thỏa mãn hàm kiểm tra đã cho.</p>
+                        <p>
+                            <i>arr.some(callback[, thisArg])</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_21 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto23">
+                    <td scope="row">sort()</td>
+                    <td>
+                        <p>sắp xếp các phần tử trong một mảng, các phần tử có thể được sắp xếp theo bảng chữ cái hoặc theo chữ số theo thứ tự tăng dần hoặc giảm dần</p>
+                        <p>
+                            <i>array.sort(compareFunction)</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_22 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto24">
+                    <td scope="row">splice()</td>
+                    <td>
+                        <p>Thêm và/hoặc gỡ bỏ các phần tử từ một mảng.</p>
+                        <p>Nếu howMany = 0: Không xóa phần tử nào, chỉ có thêm các phần tử từ vị trí index.</p>
+                        <p>Nếu howMany = a &gt; 0: Xóa đi a phần tử từ vị trí index rồi thêm các phần tử vào mảng</p>
+                        <p>
+                            <i>arr.splice(index, howMany, [element1][, ..., elementN]);</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_23 }}</code></pre></td>
+                </tr>
+                <tr class="table-success" id="goto25">
+                    <td scope="row">toString()</td>
+                    <td>
+                        <p>Trả về một chuỗi biểu diễn mảng đó và các phần tử của nó</p>
+                        <p>
+                            <i>arr.toString();</i>
+                        </p>
+                    </td>
+                 	<td><pre><code class="language-javascript">{{ code.code_24 }}</code></pre></td>
+                </tr>
+                <tr class="table-primary" id="goto26">
+                    <td scope="row">unshift()</td>
+                    <td>
+                        <p>Thêm một hoặc nhiều phần tử tới phần đầu của một mảng và trả về độ dài mới của mảng.</p>
+                        <p>
+                            <i>arr.unshift(element1[, ...[, elementN]])</i>
+                        </p>
+                    </td>
+                    <td><pre><code class="language-javascript">{{ code.code_25 }}</code></pre></td>
+                </tr>
+			</tbody>
+		</table>
+		<app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
+    </div>
+</div>
+
