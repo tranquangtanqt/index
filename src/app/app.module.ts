@@ -72,6 +72,9 @@ import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-
 import { JapanVocabularyComponent } from './component/layout/japan-vocabulary/japan-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
+//CSharp
+import { CsIndexComponent } from './component/pages/csharp/cs-index/cs-index.component';
+
 //CSS
 import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
 import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
@@ -80,6 +83,7 @@ import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
+
 
 
 @NgModule({
@@ -135,6 +139,7 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
     Css3dCardFlipAnimationComponent,
     JsArrayComponent,
     JsAngularNgrxComponent,
+    CsIndexComponent,
   ],
   imports: [
     BrowserModule,

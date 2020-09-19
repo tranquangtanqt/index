@@ -25,3 +25,9 @@ export interface IWords {
 	kanji?: String;
 	meaning?: String;
 }
+
+export interface IModal {
+	id: number;
+	title: String;
+	content: String;
+}

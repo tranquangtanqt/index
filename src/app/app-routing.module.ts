@@ -56,6 +56,9 @@ import { DlIndexComponent } from './component/pages/download/dl-index/dl-index.c
 import { JpVocabularyComponent } from './component/pages/japan/jp-vocabulary/jp-vocabulary.component';
 import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.component';
 
+//CSharp
+import { CsIndexComponent } from './component/pages/csharp/cs-index/cs-index.component';
+
 //CSS
 import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
 import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
@@ -102,6 +105,9 @@ const routes: Routes = [
 			{ path: 'javascript/basic-click-and-on-click', component: JsBasicOnOnclickComponent },
 			{ path: 'javascript/array', component: JsArrayComponent },
 			{ path: 'javascript/angular-ngrx', component: JsAngularNgrxComponent },
+
+			//CSharp
+			{ path: 'csharp', component: CsIndexComponent },
 
 			//CSS
 			{ path: 'css', component: CssIndexComponent },
