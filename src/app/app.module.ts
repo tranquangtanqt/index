@@ -74,6 +74,8 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
 
 //CSharp
 import { CsIndexComponent } from './component/pages/csharp/cs-index/cs-index.component';
+import { CsBasicDelegateComponent } from './component/pages/csharp/cs-basic-delegate/cs-basic-delegate.component';
+
 
 //CSS
 import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
@@ -140,6 +142,7 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
     JsArrayComponent,
     JsAngularNgrxComponent,
     CsIndexComponent,
+    CsBasicDelegateComponent,
   ],
   imports: [
     BrowserModule,
