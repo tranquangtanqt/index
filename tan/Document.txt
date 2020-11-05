@@ -1,0 +1,183 @@
+and trick = mẹo (thủ thuật)
+https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217
+ng new pages
+ng new pages --skip-tests
+ng generate component component/layout/base-layout
+ng generate component component/layout/footer
+ng generate component component/layout/header
+ng generate component component/layout/sidebar
+ng generate component component/layout/table-of-content
+ng generate component component/layout/japan-vocabulary
+npm install --save bootstrap
+npm install jquery --save
+npm install popper.js --save
+npm install --save @fortawesome/fontawesome-free
+	
+- Trong file angular.json
+	"styles": [
+              "src/styles.css",
+               "./node_modules/bootstrap/dist/css/bootstrap.css",
+               "./node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
+
+ng generate component component/pages/homepage/home-index
+ng generate component component/pages/demo/highlight
+ng generate component component/pages/demo/pattern
+ng generate component component/pages/demo/japan
+ng generate component component/pages/demo/demo
+ng generate component component/pages/demo/democall
+
+ng generate component component/pages/java/jv-oop-getset
+ng generate component component/pages/java/jv-oop-construcstors
+ng generate component component/pages/java/jv-oop-encapsulation
+ng generate component component/pages/java/jv-oop-inheritance
+ng generate component component/pages/java/jv-oop-abstract-class
+ng generate component component/pages/java/jv-oop-polymorphism
+ng generate component component/pages/java/jv-oop-interfaces
+ng generate component component/pages/java/jv-oop-overloading-overriding
+ng generate component component/pages/java/jv-oop-anonymous-class
+ng generate component component/pages/java/jv-oop-inner-class
+ng generate component component/pages/java/jv-oop-method-equals
+ng generate component component/pages/java/jv-basic-convert
+
+ng generate component component/pages/java/jpa/jv-jpa-anotation
+ng generate component component/pages/java/jpa/jv-jpa-h2-connection
+ng generate component component/pages/java/jpa/jv-jpa-entity
+
+ng generate component component/pages/java/spring/spr-begin
+ng generate component component/pages/java/spring/spr-select-data-hibernate-h2
+ng generate component component/pages/java/spring/spr-insert-data-hibernate-h2
+ng generate component component/pages/java/spring/spr-update-data-hibernate-h2
+ng generate component component/pages/java/spring/spr-delete-data-hibernate-h2
+
+ng generate component component/pages/javascript/js-index
+ng generate component component/pages/javascript/js-basic-on-onclick
+ng generate component component/pages/javascript/js-array
+ng generate component component/pages/javascript/js-angular-ngrx
+
+ng generate component component/pages/css/css-index
+ng generate component component/pages/css/css-spin-text-on-mouse-hover
+ng generate component component/pages/css/css-image-overlay-hover-effects
+ng generate component component/pages/css/css-skew-text-on-hover
+ng generate component component/pages/css/css-3d-text-on-hover
+ng generate component component/pages/css/css-image-hover-effects1
+ng generate component component/pages/css/css3d-card-flip-animation
+
+ng generate component component/pages/csharp/cs-index
+ng generate component component/pages/csharp/cs-basic-delegate
+
+ng generate component component/pages/ide/ide-index
+ng generate component component/pages/ide/ide-hotkey-vs
+
+ng generate component component/pages/download/dl-index
+
+ng generate component component/pages/pattern/pt-index
+
+ng generate component component/pages/japan/jpvocabulary
+ng generate component component/pages/japan/jp-index
+
+<pre><code class="language-java"></code></pre>
+
+
+- Add font:
++ Copy font vào thư mục: assets/fonts/circular-std
++ Tạo file assets/scss/modules/_fonts.scss
++ Thêm nội dung vào file styles.css: @import 'assets/scss/modules/_fonts.scss';
+
+- Add highlight code
++ npm install prismjs --save
++ Create highlight service
+
+(https://auralinna.blog/post/2017/code-syntax-highlighting-with-angular-and-prismjs/
+https://stackblitz.com/edit/angular-prismjs-highlight?file=src%2Fapp%2Fapp.component.html)
+
+
+https://medium.com/12bit/c%C3%BA-ph%C3%A1p-spread-trong-es6-4792d30b0a21
+
+https://stackoverflow.com/questions/35284988/angular-2-404-error-occur-when-i-refresh-through-the-browser
+
+
+/*
+Angular2 binding is property binding by default. There is no aria-valuenow property on div if there is no directive or component applied that has such an @Input()
+
+Use instead explicit attribute binding
+
+attr.aria-valuenow="{{MY_PREC}}" 
+or
+
+[attr.aria-valuenow]="MY_PREC" 
+*/
+
+- Sự khác nhau của routerLink = "/abc" (1) và routerLink = "abc" (2):
++ Khi gọi từ trang https://demo.com/home đến (1) => https://demo.com/abc
++ Khi gọi từ trang https://demo.com/home đến (2) => https://demo.com/home/abc
+
+Khi dùng Font Awesome 5 Free nên kèm thuộc tính font-weight: 900;
+#button-show-toc::after  {
+  content: "\f039";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  ....
+  }
+
+
+http://fsend.vn/
+https://sachvui.com/sachvui-686868666888/ebooks/2017/pdf/Sachvui.Com-du-lieu-lon-big-data.pdf
+https://github.com/kamranahmedse/developer-roadmap
+https://github.com/miloyip/game-programmer
+https://niithanoi.edu.vn/thiet-ke-chuyen-dong-voi-css-animation.html
+https://blog.hocexcel.online/
+
+
+JPA java
+https://o7planning.org/vi/10155/huong-dan-java-reflection
+https://viblo.asia/p/jpa-tut-6J3ZgEWM5mB
+https://techblog.vn/hai-cach-luu-mot-thuc-the-jpa-object-vao-database
+https://gpcoder.com/6338-cac-annotation-cua-hibernate/
+https://www.javatpoint.com/java-annotation
+https://huongdanjava.com/vi/java-persistence-api
+https://www.it-swarm-vi.tech/vi/java/viec-su-dung-chu-thich-temporal-trong-hibernate-la-gi/1048007391/
+https://stackjava.com/tu-hoc-hibernate-framework-qua-code-vi-du
+https://o7planning.org/vi/10225/tra-cuu-java-hibernate#a87873
+
+https://viblo.asia/p/nhung-anh-chang-html-lam-ban-voi-co-don-naQZRL6A5vx
+
+https://viblo.asia/p/kien-thuc-ve-lazy-loading-images-ma-ban-can-biet-ByEZk28WKQ0
+
+https://viblo.asia/p/nam-ro-java-lambda-expression-cho-nguoi-moi-bat-dau-RQqKLNwbl7z
+
+https://gpcoder.com/6375-su-dung-hibernate-tool-tao-ra-cac-hibernate-entity-tu-cac-table/
+
+https://viblo.asia/p/dependency-injection-la-gi-va-khi-nao-thi-nen-su-dung-no-LzD5d0d05jY
+
+https://viblo.asia/p/hoc-regular-expression-va-cuoc-doi-ban-se-bot-kho-updated-v22-Az45bnoO5xY
+
+https://o7planning.org/vi/11895/cai-dat-co-so-du-lieu-h2-va-su-dung-h2-console
+
+https://www.service-architecture.com/articles/database/mapping_sql_and_java_data_types.html
+
+https://www.javaguides.net/p/top-java-tutorials.html
+
+http://www.java2s.com/Tutorials/Java/JPA/0290__JPA_Table_Unique_Constraint.htm
+https://helpex.vn/question/chu-thich-uniqueconstraint-trong-java-5cbd39d8ae03f6064c266a9d
+
+
+https://loda.me/spring-giai-thich-dependency-injection-di-va-io-c-bang-ngoc-trinh-loda1553326013583/
+
+https://viblo.asia/p/spring-boot-4-component-vs-service-vs-repository-maGK7k2AKj2
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto-database-initialization
+
+https://www.javaguides.net/2019/11/hibernate-h2-database-example-tutorial.html
+
+
+https://mkyong.com/hibernate/hibernate-query-examples-hql/
+
+https://medium.com/@superjunior.dev/hibernate-ph%C3%A2n-bi%E1%BB%87t-c%C3%A1c-h%C3%A0m-save-persist-update-merge-saveorupdate-c1140663bc59
+
+https://daynhauhoc.com/t/autowired-trong-spring-java/74142
