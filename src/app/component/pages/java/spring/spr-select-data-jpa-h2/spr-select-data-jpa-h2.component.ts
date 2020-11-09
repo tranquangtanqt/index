@@ -3,11 +3,11 @@ import { HighlightService } from "./../../../../../services/highlight/highlight.
 import { ITableOfContent } from "./../../../../../data/interface";
 
 @Component({
-  selector: 'app-spr-select-data-hibernate-h2-new',
-  templateUrl: './spr-select-data-hibernate-h2-new.component.html',
-  styleUrls: ['./spr-select-data-hibernate-h2-new.component.css']
+  selector: 'app-spr-select-data-jpa-h2',
+  templateUrl: './spr-select-data-jpa-h2.component.html',
+  styleUrls: ['./spr-select-data-jpa-h2.component.css']
 })
-export class SprSelectDataHibernateH2NewComponent implements OnInit {
+export class SprSelectDataJpaH2Component implements OnInit {
   private highlighted: boolean = false;
   code: any;
   dataToc: ITableOfContent [];

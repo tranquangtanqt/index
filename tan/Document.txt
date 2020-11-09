@@ -51,7 +51,7 @@ ng generate component component/pages/java/jpa/jv-jpa-entity
 
 ng generate component component/pages/java/spring/spr-begin
 ng generate component component/pages/java/spring/spr-select-data-hibernate-h2
-ng generate component component/pages/java/spring/spr-select-data-hibernate-h2-1
+ng generate component component/pages/java/spring/spr-select-data-jpa-h2
 ng generate component component/pages/java/spring/spr-insert-data-hibernate-h2
 ng generate component component/pages/java/spring/spr-update-data-hibernate-h2
 ng generate component component/pages/java/spring/spr-delete-data-hibernate-h2

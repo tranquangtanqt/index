@@ -41,7 +41,7 @@ import { SprSelectDataHibernateH2Component } from './component/pages/java/spring
 import { SprInsertDataHibernateH2Component } from './component/pages/java/spring/spr-insert-data-hibernate-h2/spr-insert-data-hibernate-h2.component';
 import { SprUpdateDataHibernateH2Component } from './component/pages/java/spring/spr-update-data-hibernate-h2/spr-update-data-hibernate-h2.component';
 import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring/spr-delete-data-hibernate-h2/spr-delete-data-hibernate-h2.component';
-import { SprSelectDataHibernateH2NewComponent } from './component/pages/java/spring/spr-select-data-hibernate-h2-new/spr-select-data-hibernate-h2-new.component';
+import { SprSelectDataJpaH2Component } from './component/pages/java/spring/spr-select-data-jpa-h2/spr-select-data-jpa-h2.component';
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -102,7 +102,7 @@ const routes: Routes = [
 			{ path: 'java/spring-insert-data-hibernate-h2-database', component: SprInsertDataHibernateH2Component },
 			{ path: 'java/spring-update-data-hibernate-h2-database', component: SprUpdateDataHibernateH2Component },
 			{ path: 'java/spring-delete-data-hibernate-h2-database', component: SprDeleteDataHibernateH2Component },
-			{ path: 'java/spring-select-data-hibernate-h2-database-new', component: SprSelectDataHibernateH2NewComponent },
+			{ path: 'java/spring-select-data-jpa-h2-database', component: SprSelectDataJpaH2Component },
 
 			//Javascript
 			{ path: 'javascript', component: JsIndexComponent },

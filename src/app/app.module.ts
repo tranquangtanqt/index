@@ -59,7 +59,7 @@ import { SprSelectDataHibernateH2Component } from './component/pages/java/spring
 import { SprInsertDataHibernateH2Component } from './component/pages/java/spring/spr-insert-data-hibernate-h2/spr-insert-data-hibernate-h2.component';
 import { SprUpdateDataHibernateH2Component } from './component/pages/java/spring/spr-update-data-hibernate-h2/spr-update-data-hibernate-h2.component';
 import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring/spr-delete-data-hibernate-h2/spr-delete-data-hibernate-h2.component';
-import { SprSelectDataHibernateH2NewComponent } from './component/pages/java/spring/spr-select-data-hibernate-h2-new/spr-select-data-hibernate-h2-new.component';
+import { SprSelectDataJpaH2Component } from './component/pages/java/spring/spr-select-data-jpa-h2/spr-select-data-jpa-h2.component';
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -86,7 +86,6 @@ import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
-
 
 
 @NgModule({
@@ -144,7 +143,7 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
     JsAngularNgrxComponent,
     CsIndexComponent,
     CsBasicDelegateComponent,
-    SprSelectDataHibernateH2NewComponent,
+    SprSelectDataJpaH2Component,
   ],
   imports: [
     BrowserModule,
