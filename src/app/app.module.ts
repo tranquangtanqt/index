@@ -59,6 +59,7 @@ import { SprSelectDataHibernateH2Component } from './component/pages/java/spring
 import { SprInsertDataHibernateH2Component } from './component/pages/java/spring/spr-insert-data-hibernate-h2/spr-insert-data-hibernate-h2.component';
 import { SprUpdateDataHibernateH2Component } from './component/pages/java/spring/spr-update-data-hibernate-h2/spr-update-data-hibernate-h2.component';
 import { SprDeleteDataHibernateH2Component } from './component/pages/java/spring/spr-delete-data-hibernate-h2/spr-delete-data-hibernate-h2.component';
+import { SprSelectDataHibernateH2NewComponent } from './component/pages/java/spring/spr-select-data-hibernate-h2-new/spr-select-data-hibernate-h2-new.component';
 
 //Javascript
 import { JsIndexComponent } from './component/pages/javascript/js-index/js-index.component';
@@ -143,6 +144,7 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
     JsAngularNgrxComponent,
     CsIndexComponent,
     CsBasicDelegateComponent,
+    SprSelectDataHibernateH2NewComponent,
   ],
   imports: [
     BrowserModule,
