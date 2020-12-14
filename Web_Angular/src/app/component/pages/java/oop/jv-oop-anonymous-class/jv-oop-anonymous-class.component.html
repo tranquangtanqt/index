@@ -1,0 +1,36 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Anonymous class</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Anonymous class</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>Lớp Anonymous là một cách để mở rộng các lớp hiện tại một cách nhanh chóng.</p>
+        <p><b>Ví dụ: </b>Hãy xem xét có một lớp <i>Machine</i>:</p>
+		<pre><code class="language-java">{{ code.code_1 }}</code></pre>
+		<p>Khi tạo đối tượng <i>Machine</i>, chúng ta có thể thay đổi phương thức <i>start()</i> ngay lập tức.</p>
+		<pre><code class="language-java">{{ code.code_2 }}</code></pre>
+		<pre><code class="language-java">{{ code.code_3 }}</code></pre>
+		<p>Sau khi khai báo đối tượng, chúng ta đã mở ngoặc nhọn và đã ghi đè lên việc triển khai của phương thức <i>start()</i>.</p>
+		<p><b>Chú thích: </b><i>@Override </i> được sử dụng để làm cho code dễ hiểu hơn, có thể bỏ đi nhưng đầu ra vẫn không thay đổi.</p>
+		<p>- Sửa đổi chỉ áp dụng đối với đối tượng hiện tại, chứ không phải là đối tượng của lớp. Vì vậy, nếu chúng ta tạo ra một đối tượng khác của lớp đó, việc thực hiện phương thức <i>start()</i> sẽ là một trong những định nghĩa của lớp ban đầu.</p>
+		<pre><code class="language-java">{{ code.code_4 }}</code></pre>
+    </div>
+</div>

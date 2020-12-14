@@ -1,0 +1,82 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Kết nối Project Hibernate và H2 Database</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Kết nối Project Hibernate và H2 Database</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p id="goto1"><b>{{ dataToc[0].id }}. {{ dataToc[0].title }}</b></p>
+        <p>Download H2 Database tại trang: <a href="http://www.h2database.com/html/download.html" target="_blank">http://www.h2database.com/html/download.html</a></p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/jpa/downloadh2.jpg" alt="" style="width: 80%;">
+        </div>
+        <p>Download tập tin zip, giải nén ra một thư mục và chạy file h2.bat trong thư mục \bin ta được giao diện H2 Console.</p>
+        <div class="pl-5">
+        	<img src="assets/images/pages/java/jpa/h2console.jpg" alt="" style="width: 60%;" class="img-thumbnail">
+        </div>
+        <p>Sau khi nhấn vào nút <b><i>"Connect"</i></b> sẽ có 2 file được tạo ra trên ổ cứng và được đặt tại thư mục: C:\user\{{ '{' }}username{{ '}' }}</p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/jpa/save.jpg" alt="" style="width: 60%;" class="img-thumbnail">
+        </div>
+        <p>Để thay đổi đường dẫn lưu database: Thay đổi JDBC URL: <code>jdbc:h2:file:Đường_dẫn_lưu_db</code></p>
+        <pre><code class="language-xml"> jdbc:h2:file:D:\Tan\Study\Java\db_connect</code></pre>
+        <p id="goto2"><b>{{ dataToc[1].id }}. {{ dataToc[1].title }}</b></p>
+        <p>Tạo bảng TBL_BOOK:</p>
+        <pre><code class="language-java">{{ code.code_1 }}</code></pre>
+        <p>Dữ liệu TBL_BOOK sau khi tạo:</p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/jpa/data-table-TBLBook.jpg" alt="" style="width: 60%;" class="img-thumbnail">
+        </div>
+
+        <p id="goto3"><b>{{ dataToc[2].id }}. {{ dataToc[2].title }}</b></p>
+        <p>Chọn File => New => Maven Project</p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/jpa/create-project.jpg" alt="" style="width: 60%;" class="img-thumbnail">
+        </div>
+        <p></p>
+        <p>...</p>
+        <p id="goto4"><b>{{ dataToc[3].id }}. {{ dataToc[3].title }}</b></p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/jpa/cau-truc-thu-muc.jpg" alt="" style="width: 30%;" class="img-thumbnail">
+        </div>
+
+        <p id="goto5"><b>{{ dataToc[4].id }}. {{ dataToc[4].title }}</b></p>
+        <pre><code class="language-xml">{{ code.code_2 }}</code></pre>
+
+        <p id="goto6"><b>{{ dataToc[5].id }}. {{ dataToc[5].title }}</b></p>
+        <p><i>com.learning.entity.Book.java</i></p>
+        <pre><code class="language-java">{{ code.code_3 }}</code></pre>
+
+        <p id="goto7"><b>{{ dataToc[6].id }}. {{ dataToc[6].title }}</b></p>
+        <p>Tạo file persistence.xml trong thư mục META-INF</p>
+        <pre><code class="language-xml">{{ code.code_4 }}</code></pre>
+
+        <p id="goto8"><b>{{ dataToc[7].id }}. {{ dataToc[7].title }}</b></p>
+        <p><i>com.learning.util.Util.java</i></p>
+        <pre><code class="language-java">{{ code.code_5 }}</code></pre>
+
+		<p id="goto9"><b>{{ dataToc[8].id }}. {{ dataToc[8].title }}</b></p>
+		<p><i>com.learning.main.Main.java</i></p>
+		<pre><code class="language-java">{{ code.code_6 }}</code></pre>
+		<p>Kết quả: </p>
+    	<img src="assets/images/pages/java/jpa/ket-qua.jpg" alt="" class="img-thumbnail">
+        <app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
+    </div>
+</div>

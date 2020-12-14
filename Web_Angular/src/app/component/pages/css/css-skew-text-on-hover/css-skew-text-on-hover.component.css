@@ -1,0 +1,44 @@
+.result {
+	padding: 0;
+	margin: 0;
+	background: #ff90b3;
+	min-height: 50vh;
+}
+
+.content-css {
+	margin: 100px 100px;
+	text-align: center;
+	display: inline-block;
+	transition: .5s;
+}
+
+.content-css span {
+	background: #fff;
+	width: 90px;
+	height: 90px;
+	display: block;
+	line-height: 90px;
+	font-family: 'arial';
+	font-weight: bold;
+	color: #a0a0a0;
+	font-size: 40px;
+	float: left;
+	transition: .5s;
+}
+
+.content-css:hover span:nth-child(odd) {
+	transform: skewY(-15deg);
+	color: #b5b5b5;
+	box-shadow: 0 60px 20px rgba(0, 0, 0, .1);
+}
+
+.content-css:hover span:nth-child(even) {
+	transform: skewY(15deg);
+	color: #b5b5b5;
+	box-shadow: 0 60px 20px rgba(0, 0, 0, .1),
+				inset 0px 0 30px rgba(0, 0, 0, .2);
+}
+
+.content-css:hover {
+	transform: rotateX(35deg);
+}

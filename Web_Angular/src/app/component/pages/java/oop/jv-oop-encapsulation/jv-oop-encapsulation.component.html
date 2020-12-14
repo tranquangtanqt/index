@@ -1,0 +1,51 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Đóng gói (Encapsulation)</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Đóng gói (Encapsulation)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>Ý tưởng đằng sau đóng gói là để đảm bảo rằng những chi tiết thực hiện không hiển thị cho người dùng. Các biến của một lớp sẽ bị ẩn khỏi các lớp khác, chỉ có thể truy cập thông qua các phương thức của lớp hiện tại. Đây được gọi là dữ liệu ẩn.</p>
+        <p>Để đạt được sự đóng gói trong Java, khai báo các biến của lớp là private và cung cấp phương thức setter và getter chung để sửa đổi và xem các giá trị của các biến.</p>
+		<pre><code class="language-java">public class Student {{ '{' }}
+    private String name;
+ 
+    public String getName() {{ '{' }}
+        return name;
+    {{ '}' }}
+ 
+    public void setName(String name) {{ '{' }}
+        this.name = name;
+    {{ '}' }}
+{{ '}' }}
+
+class Test {{ '{' }}
+    public static void main(String[] args) {{ '{' }}
+        Student s = new Student();
+        s.setName("Nguyen Van A");
+        System.out.println(s.getName());
+    {{ '}' }}
+{{ '}' }}</code></pre>
+		<p>Tóm lại, đóng gói cung cấp các lợi ích sau:</p>
+		<p class="pl-4">- Kiểm soát truy cập hoặc sửa đổi dữ liệu</p>
+		<p class="pl-4">- Mã linh hoạt và dễ thay đổi hơn</p>
+		<p class="pl-4">- Khả năng thay đổi một phần của mã mà không ảnh hưởng đến các phần khác</p>   
+    </div>
+</div>

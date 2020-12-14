@@ -1,0 +1,44 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Lớp trừu tượng (Abstract Class)</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Lớp trừu tượng (Abstract Class)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p>Tính trừu tượng là một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới người dùng. Nói cách khác, nó chỉ hiển thị các thứ quan trọng tới người dùng và ẩn các chi tiết nội tại.</p>
+        <p>Một ví dụ thực tế tốt là một quyển sách. Khi bạn nghe thuật ngữ, bạn không biết chính xác chi tiết, chẳng hạn như số trang, màu sắc, hoặc kích thước, nhưng bạn hiểu ý tưởng hoặc trừu tượng của một cuốn sách.</p>
+        <p>Khái niệm trừu tượng là chúng ta tập trung vào các phẩm chất thiết yếu, chứ không phải là đặc điểm cụ thể của một ví dụ cụ thể.</p><br>
+        <p>Trong Java, trừu tượng đạt được bằng cách sử dụng các lớp trừu tượng và giao diện (interface).</p>
+        <p>Một lớp trừu tượng được định nghĩa bằng cách sử dụng từ khoá abstract.</p>
+        <p class="pl-4">- Một phương thức được khai báo là abstract và không có trình triển khai thì đó là phương thức trừu tượng.</p>
+        <p class="pl-4">- Để sử dụng một lớp trừu tượng, bạn phải kế thừa nó từ một lớp khác.</p>
+        <p class="pl-4">- Phương thức abstract sẽ không có định nghĩa, được theo sau bởi dấu chấm phẩy, không có dấu ngoặc móc theo sau.</p>
+        <p><b>Ví dụ 1:</b> định nghĩa lớp Animal của chúng ta như là trừu tượng:</p>
+		<pre><code class="language-java">{{ code.code_1 }}</code></pre>
+		<p>Phương thức makeSound cũng là trừu tượng, vì nó không có sự thực hiện trong lớp cha.</p>
+		<p>
+Chúng ta có thể kế thừa từ lớp Animal và xác định phương thức makeSound () cho lớp con:</p>
+		<pre><code class="language-java">{{ code.code_2 }}</code></pre>
+		<p>Mỗi Động vật (Animal) tạo ra âm thanh (makeSound), nhưng mỗi con lại có một cách khác để làm điều đó. Đó là lý do tại sao chúng ta định nghĩa một lớp Animal là trừu tượng, và để lại việc thực hiện cách chúng tạo ra âm thanh cho các lớp con.</p>
+		<pre><code class="language-java">{{ code.code_3 }}</code></pre>
+		<p><b>Ví dụ 2:</b></p>
+		<pre><code class="language-java">{{ code.code_4 }}</code></pre>
+    </div>
+</div>

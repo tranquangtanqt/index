@@ -1,0 +1,175 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Phương thức equals() (So sánh đối tượng)</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Phương thức equals() (So sánh đối tượng)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <p><b>1. So sánh đối tượng (Comparing Objects):</b></p>
+        <p>Hãy nhớ rằng khi bạn tạo ra các đối tượng, các biến sẽ được lưu tham chiếu đến các đối tượng. Vì vậy, khi bạn so sánh các đối tượng sử dụng toán tử kiểm tra tính công bằng (==), nó thực sự so sánh các tham chiếu chứ không phải các giá trị đối tượng.</p>
+		<pre><code class="language-java">class Animal {{ '{' }}
+    String name;
+    Animal(String n) {{ '{' }}
+        name = n;
+    {{ '}' }}
+{{ '}' }}
+
+class MyClass {{ '{' }}
+    public static void main(String[ ] args) {{ '{' }}
+        Animal a1 = new Animal("Robby");
+        Animal a2 = new Animal("Robby");
+        System.out.println(a1 == a2);
+    {{ '}' }}
+{{ '}' }}
+
+/**************
+ * Output
+ * False
+**************/
+</code></pre>
+		<p>Mặc dù có hai đối tượng có cùng tên, việc kiểm tra tính bằng nhau vẫn trả về false, bởi vì chúng ta có hai đối tượng khác nhau (hai tham chiếu khác nhau hoặc các vị trí vùng nhớ khác nhau).</p>
+		<p><b>Ví dụ:</b></p>
+		<pre><code class="language-java">class A {{ '{' }}
+    private int x;
+    public static void main(String[ ] args) {{ '{' }}
+        A a = new A();
+        a.x = 5;
+        
+        A b = new A();
+        b.x = 5;
+        
+        System.out.println(a == b);
+    {{ '}' }}
+{{ '}' }}
+/**************
+ * Output
+ * False
+**************/</code></pre>
+		<p><b>2. Phương thức equals()</b></p>
+		<p>Mỗi đối tượng đã xác định trước một phương thức <i>equals()</i> được sử dụng để kiểm tra sự cân bằng ngữ nghĩa. Nhưng, để làm cho phương thức hoạt động trong các lớp, chúng ta cần phải ghi đè nó và kiểm tra các điều kiện cần thiết. Có một cách tạo ra phương thức <i>equals()</i> đơn giản và nhanh chóng đó là chỉ cần nhấp chuột phải vào class, <b><i>chọn Source->Generate hashCode() and equals()...</i></b></p>
+		<img src="assets/images/pages/java/equals-eclipse.png" alt="">
+		<br>
+		<p>=> Điều này sẽ tự động tạo ra các phương thức mà chúng ta cần.</p>
+		<p><b>Ví dụ: </b>Cho lớp Animal như sau:</p>
+		<pre><code class="language-java">class Animal {{ '{' }}
+  String name;
+  Animal(String n) {{ '{' }}
+    name = n;
+  {{ '}' }}
+{{ '}' }}</code></pre>
+		<p> Sau khi chuột phải vào class, chọn <b><i>chọn Source->Generate hashCode() and equals()...</i></b></p>
+		<pre><code class="language-java">class Animal {{ '{' }}
+    String name;
+    Animal(String n) {{ '{' }}
+        name = n;
+    {{ '}' }}
+    @Override
+    public int hashCode() {{ '{' }}
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    {{ '}' }}
+    @Override
+    public boolean equals(Object obj) {{ '{' }}
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Animal other = (Animal) obj;
+        if (name == null) {{ '{' }}
+            if (other.name != null)
+                return false;
+        {{ '}' }} else if (!name.equals(other.name))
+            return false;
+        return true;
+    {{ '}' }}
+{{ '}' }}</code></pre>
+		<p>Eclipse sẽ tự động tạo phương thức <i>hashCode()</i>  được sử dụng để xác định nơi để lưu trữ các đối tượng nội bộ. Bất cứ khi nào bạn sử dụng <i>equals()</i>, bạn phải thực hiện <i>hashCode()</i>.</p>
+		<p> Bây giờ tạo thêm đối tượng và chạy chương trình sử dụng phương thức <i>equals()</i></p>
+		<pre><code class="language-java">class Animal {{ '{' }}
+    String name;
+    Animal(String n) {{ '{' }}
+        name = n;
+    {{ '}' }}
+    @Override
+    public int hashCode() {{ '{' }}
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    {{ '}' }}
+    @Override
+    public boolean equals(Object obj) {{ '{' }}
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Animal other = (Animal) obj;
+        if (name == null) {{ '{' }}
+            if (other.name != null)
+                return false;
+        {{ '}' }} else if (!name.equals(other.name))
+            return false;
+        return true;
+    {{ '}' }}
+{{ '}' }}
+
+class Program {{ '{' }}
+    public static void main(String[ ] args) {{ '{' }}
+        Animal a1 = new Animal("Robby");
+        Animal a2 = new Animal("Robby");
+        System.out.println(a1.equals(a2));
+    {{ '}' }}
+{{ '}' }}
+
+/****************
+ * Output
+ * true
+****************/</code></pre>
+		<p>	<b>Ví dụ:</b></p>
+		<pre><code class="language-java">class A {{ '{' }}
+   private int x;
+   public  boolean equals(Object o) {{ '{' }}
+     return ((A)o).x == this.x;
+   {{ '}' }} 
+   
+   public static void main(String[ ] args)  {{ '{' }}
+        A a = new A();
+        a.x = 10;
+        
+        A b = new  A();
+        b.x = 10;
+        
+        System.out.println(a. equals(b));
+   {{ '}' }}
+{{ '}' }}
+
+/************
+ * Output
+ * true
+*************/</code></pre>
+		<p>Có thể sử dụng cách trên để tạo ra các phương pháp hữu ích khác, chẳng hạn như <i>getters</i> và <i>setters</i> cho thuộc tính lớp.</p>
+    </div>
+</div>

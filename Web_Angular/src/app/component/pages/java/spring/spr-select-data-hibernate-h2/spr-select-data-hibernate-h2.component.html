@@ -1,0 +1,90 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">Select dữ liệu với hibernate, h2 database</h2>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a [routerLink]="['/java']" class="breadcrumb-link">Java</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Select dữ liệu với hibernate, h2 database</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    	<!-- 1. Cấu trúc project -->
+    	<p id="goto1"><b>{{ dataToc[0].id }}. {{ dataToc[0].title }}</b></p>
+    	<div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database.jpg" alt="" style="width: 30%;">
+        </div>
+
+        <!-- 2. pom.xml -->
+        <p id="goto2"><b>{{ dataToc[1].id }}. {{ dataToc[1].title }}</b></p>
+        <pre><code class="language-xml">{{ code.code_1 }}</code></pre>
+
+        <!-- 3. Book.java -->
+        <p id="goto3"><b>{{ dataToc[2].id }}. {{ dataToc[2].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_2 }}</code></pre>
+
+     	<!-- 4. Author.java -->
+     	<p id="goto4"><b>{{ dataToc[3].id }}. {{ dataToc[3].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_3 }}</code></pre>
+
+     	<!-- 5. application.properties -->
+     	<p id="goto5"><b>{{ dataToc[4].id }}. {{ dataToc[4].title }}</b></p>
+     	<pre><code class="language-xml">{{ code.code_4 }}</code></pre>
+
+     	<!-- 6. data.sql -->
+     	<p id="goto6"><b>{{ dataToc[5].id }}. {{ dataToc[5].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_5 }}</code></pre>
+
+     	<!-- 7. BookDao.java -->
+     	<p id="goto7"><b>{{ dataToc[6].id }}. {{ dataToc[6].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_6 }}</code></pre>
+
+     	<!-- 8. BookDaoImpl.java -->
+     	<p id="goto8"><b>{{ dataToc[7].id }}. {{ dataToc[7].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_7 }}</code></pre>
+
+     	<!-- 9. BookService.java -->
+     	<p id="goto9"><b>{{ dataToc[8].id }}. {{ dataToc[8].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_8 }}</code></pre>
+
+     	<!-- 10. BookServiceImpl.java -->
+     	<p id="goto10"><b>{{ dataToc[9].id }}. {{ dataToc[9].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_9 }}</code></pre>
+
+     	<!-- 11. BookController.java -->
+     	<p id="goto11"><b>{{ dataToc[10].id }}. {{ dataToc[10].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_10 }}</code></pre>
+
+     	<!-- 12. SpringwebappApplication.java -->
+     	<p id="goto12"><b>{{ dataToc[11].id }}. {{ dataToc[11].title }}</b></p>
+     	<pre><code class="language-java">{{ code.code_11 }}</code></pre>
+
+     	<!-- 13. Kết quả khi chạy chương trình -->
+     	<p id="goto13"><b>{{ dataToc[12].id }}. {{ dataToc[12].title }}</b></p>
+     	<p><i>H2 database console</i></p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-1.jpg" alt="" style="width: 60%;">
+        </div>
+     	<div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-2.jpg" alt="" style="width: 60%;">
+        </div>
+        <p><i>http://localhost:9090/listbook</i></p>
+        <div class="pl-5 pb-3">
+        	<img src="assets/images/pages/java/spring/spring-select-data-hibernate-h2-database-3.jpg" alt="" style="width: 100%;">
+        </div>
+        <app-table-of-content [childDataToc]="dataToc"></app-table-of-content>
+    </div>
+</div>

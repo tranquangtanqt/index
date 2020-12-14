@@ -1,0 +1,134 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="page-header">
+			<h2 class="pageheader-title">Vocabulary - Unit {{unitNumber}}</h2>
+			<div class="page-breadcrumb">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a [routerLink]="['/']" class="breadcrumb-link">Trang chủ</a></li>
+						<li class="breadcrumb-item"><a [routerLink]="['/japan']" class="breadcrumb-link">Japan</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Vocabulary - Unit {{unitNumber}}</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="min-height: 46vh;">
+		<div class="row">
+			<div class="col-md-8 col-lg-8 col-xl-8" *ngIf="show">
+				<div class="m-t-100" style="min-height: 30vh">
+					<div class="loading-spinner"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-lg-8 col-xl-8" *ngIf="!show">
+				<div class="row">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div class="card text-white bg-dark mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ data[indexAnswer].meaning }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-xl-6">
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-body" (click)="enableClick ? onAnswer(arrAnswer[0]): null">
+								<p class="card-text text-center" style="cursor: pointer;"><b>{{ data[arrAnswer[0]].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-6">
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-body" (click)="enableClick ? onAnswer(arrAnswer[1]): null">
+								<p class="card-text text-center" style="cursor: pointer;"><b>{{ data[arrAnswer[1]].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-xl-6">
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-body" (click)="enableClick ? onAnswer(arrAnswer[2]): null">
+								<p class="card-text text-center" style="cursor: pointer;"><b>{{ data[arrAnswer[2]].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-xl-6">
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-body" (click)="enableClick ? onAnswer(arrAnswer[3]): null">
+								<p class="card-text text-center" style="cursor: pointer;"><b>{{ data[arrAnswer[3]].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" *ngIf="flagAnswerCorrect">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div class="card text-white bg-success mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ data[indexAnswer].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" *ngIf="flagAnswerWrong">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div class="card text-white bg-danger mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ data[indexAnswer].hiragana }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-xl-4">
+				<div class="row">
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
+						<div class="card text-white bg-success mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ scoreCorrect }}</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
+						<div class="card text-white bg-danger mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ scoreWrong }}</b></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 col-xl-4 col-4">
+						<div class="card text-white bg-info mb-3">
+							<div class="card-body">
+								<p class="card-text text-center"><b>{{ percenCorrect }}%</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 col-lg-12 col-xl-12">
+						<div *ngIf="flagAnswerCorrect">
+							<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+						</div>
+						<div *ngIf="flagAnswerWrong">  
+					  		<div class="swal2-icon swal2-error swal2-animate-error-icon" style="display: flex;"><span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
