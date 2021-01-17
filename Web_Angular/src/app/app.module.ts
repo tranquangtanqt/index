@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
+import { DataTablesModule } from 'angular-datatables';
 //------------------------
 // Service
 //------------------------
@@ -88,6 +90,9 @@ import { CssImageHoverEffects1Component } from './component/pages/css/css-image-
 import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
 
 
+import { AdminLinkHomePageComponent } from './component/pages/admin/admin-link-home-page/admin-link-home-page.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -144,10 +149,13 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
     CsIndexComponent,
     CsBasicDelegateComponent,
     SprSelectDataJpaH2Component,
+    AdminLinkHomePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

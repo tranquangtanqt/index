@@ -1,0 +1,60 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="page-header">
+			<h2 class="pageheader-title">Link Home Page</h2>
+			<div class="page-breadcrumb">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a routerLink="/" class="breadcrumb-link">Trang chủ</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Link Home Page</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row" *ngIf="listLinkHomePage">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="accrodion-regular accordion-custom">
+		    <div id="accordion">
+		        <div class="card" *ngFor="let item of listLinkHomePage; let i = index">
+		            <div class="card-header" id="heading{{ i }}">
+		                <h5 class="mb-0">
+		                    <button class="btn btn-link" data-toggle="collapse" attr.data-target="#collapse{{ i }}" aria-expanded="false" attr.aria-controls="collapse{{ i }}">
+		                    <b>{{ item.name }}</b>
+		                    </button>
+		                </h5>
+		            </div>
+		            <div id="collapse{{ i }}" class="collapse" attr.aria-labelledby="heading{{ i }}" data-parent="#accordion">
+		                <div class="card-body" *ngIf="item.listLinkHomePageDetail">
+		                    <table datatable class="display order-column cell-border hover">
+								<thead>
+								  <tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Update</th>
+									<th>Delete</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr *ngFor="let itemDetail of item.listLinkHomePageDetail">
+									<td>{{ itemDetail.id }}</td>
+									<td>{{ itemDetail.name }}</td>
+									<td>update</td>
+									<td>delete</td>
+								  </tr>
+								</tbody>
+							</table>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>

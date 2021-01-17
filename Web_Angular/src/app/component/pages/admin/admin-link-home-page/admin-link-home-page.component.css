@@ -1,0 +1,25 @@
+/* .link-home-page {
+    color: red;
+    overflow: hidden;
+    text-align: center;
+}
+
+.link-home-page:before,
+.link-home-page:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.link-home-page:before:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.link-home-page:before:after {
+    left: 0.5em;
+    margin-right: -50%;
+} */

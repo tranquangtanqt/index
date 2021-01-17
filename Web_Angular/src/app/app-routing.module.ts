@@ -71,6 +71,9 @@ import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-h
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 
 
+
+import { AdminLinkHomePageComponent } from './component/pages/admin/admin-link-home-page/admin-link-home-page.component';
+
 const routes: Routes = [
 	{
 		path: '',
@@ -144,11 +147,13 @@ const routes: Routes = [
 			{path: 'demo/call', component: DemocallComponent},
 
 			{path: 'demo/demo', component: DemoComponent},
-			{path: 'demo/demo/:id', component: DemoComponent}
+			{path: 'demo/demo/:id', component: DemoComponent},
+
+			{path: 'admin/linkhomepage', component: AdminLinkHomePageComponent}
 
 		]
 	},
-	// {path: '**', redirectTo: ''}
+	{path: '**', redirectTo: ''}
 
 ];
 

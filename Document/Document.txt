@@ -82,6 +82,14 @@ ng generate component component/pages/pattern/pt-index
 ng generate component component/pages/japan/jpvocabulary
 ng generate component component/pages/japan/jp-index
 
+
+ng generate component component/pages/admin/admin-link-home-page
+
+
+ng add angular-datatables
+import { DataTablesModule } from 'angular-datatables';
+import DataTablesModule
+
 <pre><code class="language-java"></code></pre>
 
 
@@ -126,6 +134,8 @@ Khi dùng Font Awesome 5 Free nên kèm thuộc tính font-weight: 900;
   ....
   }
 
+
+https://jasonwatmore.com/post/2019/09/06/angular-http-get-request-examples
 
 http://fsend.vn/
 https://sachvui.com/sachvui-686868666888/ebooks/2017/pdf/Sachvui.Com-du-lieu-lon-big-data.pdf
