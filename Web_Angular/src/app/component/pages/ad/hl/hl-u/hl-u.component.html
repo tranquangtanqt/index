@@ -1,0 +1,39 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="page-header">
+			<h2 class="pageheader-title">Cập nhật liên kết</h2>
+			<div class="page-breadcrumb">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/admin/homelink" class="breadcrumb-link">Danh sách liên kết</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cập nhật</li>
+					</ol>
+                </nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" *ngIf="homeLink">
+		<form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name-link">Tên liên kết</label>
+                <input type="text" [ngClass]="{'form-control': true, 'is-invalid': errors && errors.hasOwnProperty('name')}" id="name-link" [(ngModel)]="homeLink.name" name="name" placeholder="Nhập tên liên kết">
+				<div class="invalid-feedback" *ngIf="errors && errors.hasOwnProperty('name')">
+					{{ errors["name"] }}
+				</div>
+			</div>
+
+			<input type="text" [ngClass]="{'d-none': true}" [(ngModel)]="homeLink.sortOrder" name="sortOrder">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+        </form>
+	</div>
+</div>

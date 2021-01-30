@@ -82,9 +82,18 @@ ng generate component component/pages/pattern/pt-index
 ng generate component component/pages/japan/jpvocabulary
 ng generate component component/pages/japan/jp-index
 
+ng generate component component/pages/admin/admin-link-home-page-index
+ng generate component component/pages/admin/admin-link-home-page-create
+ng generate component component/pages/admin/admin-link-home-page-update
+//Link home page
+ng generate component component/pages/ad/hl/hl-i
+ng generate component component/pages/ad/hl/hl-c
+ng generate component component/pages/ad/hl/hl-u
+ng generate service services/pages/lhp/lhp
+ng generate service services/pages/home/hl
 
-ng generate component component/pages/admin/admin-link-home-page
-
+//error
+ng generate component component/pages/us/err/err-notfound
 
 ng add angular-datatables
 import { DataTablesModule } from 'angular-datatables';
@@ -192,3 +201,6 @@ https://mkyong.com/hibernate/hibernate-query-examples-hql/
 https://medium.com/@superjunior.dev/hibernate-ph%C3%A2n-bi%E1%BB%87t-c%C3%A1c-h%C3%A0m-save-persist-update-merge-saveorupdate-c1140663bc59
 
 https://daynhauhoc.com/t/autowired-trong-spring-java/74142
+
+
+add error for input: add class "is-invalid"

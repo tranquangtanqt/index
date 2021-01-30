@@ -1,9 +1,9 @@
 
-export interface ILinkHomePage {
+export interface IHomeLink {
     id: number;
     name: string;
     sortOrder: number;
     createdAt: Date;
     updatedAt: Date;
-    listLinkHomePageDetail: any;
+    listHomeLinkDetail: any;
 } 

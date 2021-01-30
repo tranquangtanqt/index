@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BaseLayoutComponent } from './component/layout/base-layout/base-layout.component';
 import { HomeIndexComponent } from './component/pages/homepage/home-index/home-index.component';
+import { ErrNotfoundComponent } from './component/pages/us/err/err-notfound/err-notfound.component';
+
 //Demo
 import { PatternComponent } from './component/pages/demo/pattern/pattern.component';
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
@@ -61,7 +63,6 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
 import { CsIndexComponent } from './component/pages/csharp/cs-index/cs-index.component';
 import { CsBasicDelegateComponent } from './component/pages/csharp/cs-basic-delegate/cs-basic-delegate.component';
 
-
 //CSS
 import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
 import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
@@ -70,17 +71,20 @@ import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 
-
-
-import { AdminLinkHomePageComponent } from './component/pages/admin/admin-link-home-page/admin-link-home-page.component';
+import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
+import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
+import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
 
 const routes: Routes = [
+	//notfound page
 	{
 		path: '',
 		component: BaseLayoutComponent,
 		children: [
 			//homepage
 			{ path: '', component: HomeIndexComponent },
+			//notfound page
+			{ path: 'error', component: ErrNotfoundComponent },
 			//Java
 			{ path: 'java', component: JvIndexComponent },
 			{ path: 'java/oop-getset', component: JvOopGetsetComponent },
@@ -149,11 +153,14 @@ const routes: Routes = [
 			{path: 'demo/demo', component: DemoComponent},
 			{path: 'demo/demo/:id', component: DemoComponent},
 
-			{path: 'admin/linkhomepage', component: AdminLinkHomePageComponent}
+			{path: 'admin/homelink', component: HlIComponent},
+			{path: 'admin/homelink/create', component: HlCComponent},
+			{path: 'admin/homelink/update/:id', component: HlUComponent}
+			
 
 		]
 	},
-	{path: '**', redirectTo: ''}
+	{path: '**', redirectTo: '/error'}
 
 ];
 

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminLinkHomePageComponent } from './admin-link-home-page.component';
+import { HlIComponent } from './hl-i.component';
 
-describe('AdminLinkHomePageComponent', () => {
-  let component: AdminLinkHomePageComponent;
-  let fixture: ComponentFixture<AdminLinkHomePageComponent>;
+describe('HlIComponent', () => {
+  let component: HlIComponent;
+  let fixture: ComponentFixture<HlIComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminLinkHomePageComponent ]
+      declarations: [ HlIComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminLinkHomePageComponent);
+    fixture = TestBed.createComponent(HlIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,4 @@
-export interface IFD {
+export interface IHomeLinkDetail {
     id: number;
     name: string;
     link: string;

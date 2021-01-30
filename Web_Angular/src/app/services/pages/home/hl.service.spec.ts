@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LinkHomePageService } from './link-home-page.service';
+import { HlService } from './hl.service';
 
-describe('LinkHomePageService', () => {
-  let service: LinkHomePageService;
+describe('HlService', () => {
+  let service: HlService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LinkHomePageService);
+    service = TestBed.inject(HlService);
   });
 
   it('should be created', () => {

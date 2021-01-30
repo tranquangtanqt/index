@@ -79,7 +79,6 @@ import { JpIndexComponent } from './component/pages/japan/jp-index/jp-index.comp
 import { CsIndexComponent } from './component/pages/csharp/cs-index/cs-index.component';
 import { CsBasicDelegateComponent } from './component/pages/csharp/cs-basic-delegate/cs-basic-delegate.component';
 
-
 //CSS
 import { CssIndexComponent } from './component/pages/css/css-index/css-index.component';
 import { CssSpinTextOnMouseHoverComponent } from './component/pages/css/css-spin-text-on-mouse-hover/css-spin-text-on-mouse-hover.component';
@@ -89,9 +88,10 @@ import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-h
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
 
-
-import { AdminLinkHomePageComponent } from './component/pages/admin/admin-link-home-page/admin-link-home-page.component';
-
+import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
+import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
+import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
+import { ErrNotfoundComponent } from './component/pages/us/err/err-notfound/err-notfound.component';
 
 @NgModule({
   declarations: [
@@ -149,13 +149,17 @@ import { AdminLinkHomePageComponent } from './component/pages/admin/admin-link-h
     CsIndexComponent,
     CsBasicDelegateComponent,
     SprSelectDataJpaH2Component,
-    AdminLinkHomePageComponent
+    HlIComponent,
+    HlCComponent,
+    HlUComponent,
+    ErrNotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
   ],
   providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -4,14 +4,14 @@
 <div class="row">
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="page-header">
-			<h2 class="pageheader-title">Link Home Page</h2>
+			<h2 class="pageheader-title">Danh sách liên kết</h2>
 			<div class="page-breadcrumb">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a routerLink="/" class="breadcrumb-link">Trang chủ</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Link Home Page</li>
+                        <li class="breadcrumb-item active" aria-current="page">Danh sách liên kết</li>
 					</ol>
-				</nav>
+                </nav>
 			</div>
 		</div>
 	</div>
@@ -19,31 +19,44 @@
 <!-- ============================================================== -->
 <!-- end pageheader -->
 <!-- ============================================================== -->
-<div class="row" *ngIf="listLinkHomePage">
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4 class="float-right"><a [routerLink]="['/admin/homelink/create']">Tạo mới</a></h4>
+	</div>
+</div>
+<div class="row" *ngIf="listHomeLink">
 	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		<div class="accrodion-regular accordion-custom">
 		    <div id="accordion">
-		        <div class="card" *ngFor="let item of listLinkHomePage; let i = index">
+		        <div class="card" *ngFor="let item of listHomeLink; let i = index">
 		            <div class="card-header" id="heading{{ i }}">
 		                <h5 class="mb-0">
 		                    <button class="btn btn-link" data-toggle="collapse" attr.data-target="#collapse{{ i }}" aria-expanded="false" attr.aria-controls="collapse{{ i }}">
 		                    <b>{{ item.name }}</b>
-		                    </button>
+                            </button>
+                            <h5 class="float-right">
+								<button type="button" class="btn btn-danger btn-xs" (click)="delete(item.id)">
+									<i class="fas fa-trash-alt"></i>
+								</button>
+								<button type="button" class="btn btn-success btn-xs" (click)="updateRedirect(item.id)">
+									<i class="fas fa-edit"></i>
+								</button>
+							</h5>
 		                </h5>
 		            </div>
 		            <div id="collapse{{ i }}" class="collapse" attr.aria-labelledby="heading{{ i }}" data-parent="#accordion">
-		                <div class="card-body" *ngIf="item.listLinkHomePageDetail">
+		                <div class="card-body" *ngIf="item.listHomeLinkDetail">
 		                    <table datatable class="display order-column cell-border hover">
 								<thead>
 								  <tr>
 									<th>ID</th>
-									<th>Name</th>
-									<th>Update</th>
-									<th>Delete</th>
+									<th>Tên liên kết</th>
+									<th>Cập nhật</th>
+									<th>Xóa</th>
 								  </tr>
 								</thead>
 								<tbody>
-								  <tr *ngFor="let itemDetail of item.listLinkHomePageDetail">
+								  <tr *ngFor="let itemDetail of item.listHomeLinkDetail">
 									<td>{{ itemDetail.id }}</td>
 									<td>{{ itemDetail.name }}</td>
 									<td>update</td>
