@@ -1,0 +1,36 @@
+<!-- ============================================================== -->
+<!-- pageheader -->
+<!-- ============================================================== -->
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+		<div class="page-header">
+			<h2 class="pageheader-title">Thay đổi thứ tự sắp xếp danh sách liên kết</h2>
+			<div class="page-breadcrumb">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a routerLink="/" class="breadcrumb-link">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Danh sách liên kết</li>
+					</ol>
+                </nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader -->
+<!-- ============================================================== -->
+<div class="row" *ngIf="listHomeLink">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+       
+            <ngx-sortable [items]="listHomeLink" [name]="'Danh sách liên kết'" (listSorted)="listSorted($event)">
+                <ng-template let-item>
+                    <div class="sortable-list-item">
+                        {{item.name}}
+                    </div>
+                </ng-template>
+            </ngx-sortable>
+        <form (ngSubmit)="onSubmit()">
+            <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
+        </form>
+    </div>
+</div>

@@ -74,6 +74,7 @@ import { CssImageHoverEffects1Component } from './component/pages/css/css-image-
 import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
 import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
 import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
+import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
 
 const routes: Routes = [
 	//notfound page
@@ -155,7 +156,9 @@ const routes: Routes = [
 
 			{path: 'admin/homelink', component: HlIComponent},
 			{path: 'admin/homelink/create', component: HlCComponent},
-			{path: 'admin/homelink/update/:id', component: HlUComponent}
+			{path: 'admin/homelink/update/:id', component: HlUComponent},
+			{path: 'admin/homelink/updatesort', component: HlSComponent},
+			
 			
 
 		]

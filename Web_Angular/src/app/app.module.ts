@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
 import { DataTablesModule } from 'angular-datatables';
+import { NgxSortableModule } from 'ngx-sortable';
+
 //------------------------
-// Service
+// Servicengx-sortable/dist/inde
 //------------------------
 import { HighlightService } from "./services/highlight/highlight.service";
 
@@ -20,6 +22,7 @@ import { HeaderComponent } from './component/layout/header/header.component';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
 import { HomeIndexComponent } from './component/pages/homepage/home-index/home-index.component';
 import { TableOfContentComponent } from './component/layout/table-of-content/table-of-content.component';
+import { ErrNotfoundComponent } from './component/pages/us/err/err-notfound/err-notfound.component';
 
 import { LibPrismComponent } from './component/pages/libraryAngular/lib-prism/lib-prism.component';
 //Demo
@@ -91,7 +94,10 @@ import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-car
 import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
 import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
 import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
-import { ErrNotfoundComponent } from './component/pages/us/err/err-notfound/err-notfound.component';
+import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -152,14 +158,16 @@ import { ErrNotfoundComponent } from './component/pages/us/err/err-notfound/err-
     HlIComponent,
     HlCComponent,
     HlUComponent,
-    ErrNotfoundComponent
+    ErrNotfoundComponent,
+    HlSComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
+    NgxSortableModule
   ],
   providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

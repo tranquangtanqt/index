@@ -33,6 +33,10 @@ export class HlService {
     return this.http.put(`${BaseUrl}` + 'homelink/update/' + `${id}`, value);
   }
 
+  updateSortLink(value: any): Observable<any> {
+    return this.http.post(`${BaseUrl}` + 'homelink/updatesort/', value);
+  }
+
   deleteLink(id: number): Observable<any> {
     return this.http.delete(`${BaseUrl}` + 'homelink/delete/' + `${id}`);
   }
