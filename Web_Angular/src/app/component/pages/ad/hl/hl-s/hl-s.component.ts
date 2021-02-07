@@ -1,7 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { Observable } from "rxjs";
-import { HlService } from "../../../../../services/pages/home/hl.service";
-import { IHomeLink } from '../../../../../object/IHomeLink';
+import { HlService } from "../../../../../core/services/pages/home/hl.service";
+import { IHomeLink } from '../../../../../core/interface/IHomeLink';
 import { Router } from '@angular/router';
 
 @Component({

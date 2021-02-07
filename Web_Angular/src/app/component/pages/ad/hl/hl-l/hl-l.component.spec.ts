@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HlIComponent } from './hl-i.component';
+import { HlLComponent } from './hl-l.component';
 
-describe('HlIComponent', () => {
-  let component: HlIComponent;
-  let fixture: ComponentFixture<HlIComponent>;
+describe('HlLComponent', () => {
+  let component: HlLComponent;
+  let fixture: ComponentFixture<HlLComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HlIComponent ]
+      declarations: [ HlLComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HlIComponent);
+    fixture = TestBed.createComponent(HlLComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

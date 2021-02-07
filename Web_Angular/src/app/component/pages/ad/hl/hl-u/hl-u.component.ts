@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HlService } from "../../../../../services/pages/home/hl.service";
-import { IHomeLink } from '../../../../../object/IHomeLink';
-import { CommonUtils } from "../../../../../services/utils";
+import { HlService } from "../../../../../core/services/pages/home/hl.service";
+import { IHomeLink } from '../../../../../core/interface/IHomeLink';
+import { CommonUtils } from "../../../../../core/class/utils";
+import { MessagesService } from "../../../../../core/services/messages/messages.service";
+import { MessageConst } from "../../../../../core/const/constant";
 
 @Component({
   selector: 'app-hl-u',
@@ -15,7 +17,7 @@ export class HlUComponent implements OnInit {
   errors: Object;
 
   constructor(private route: ActivatedRoute, private router: Router,
-    private hlService: HlService) { }
+    private hlService: HlService, private messagesService: MessagesService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -36,6 +38,7 @@ export class HlUComponent implements OnInit {
         responseSuccess => {
           let common = new CommonUtils(responseSuccess.data);
           if(common.checkObjectIsNullOrEmpty()){
+            this.messagesService.changeMessage(`${MessageConst.messageUpdateSuccess}`);
             this.router.navigate(['/admin/homelink']);
           } else {
             this.errors = responseSuccess.data;

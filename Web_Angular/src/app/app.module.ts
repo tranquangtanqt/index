@@ -6,6 +6,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
 import { DataTablesModule } from 'angular-datatables';
 import { NgxSortableModule } from 'ngx-sortable';
+import { AlertifyService } from "./core/services/alertify/alertify.service";
 
 //------------------------
 // Servicengx-sortable/dist/inde
@@ -91,12 +92,10 @@ import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-h
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 import { Css3dCardFlipAnimationComponent } from './component/pages/css/css3d-card-flip-animation/css3d-card-flip-animation.component';
 
-import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
 import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
 import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
 import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
-
-
+import { HlLComponent } from './component/pages/ad/hl/hl-l/hl-l.component';
 
 
 @NgModule({
@@ -155,11 +154,11 @@ import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
     CsIndexComponent,
     CsBasicDelegateComponent,
     SprSelectDataJpaH2Component,
-    HlIComponent,
     HlCComponent,
     HlUComponent,
     ErrNotfoundComponent,
-    HlSComponent
+    HlSComponent,
+    HlLComponent
   ],
   imports: [
     BrowserModule,
@@ -169,7 +168,7 @@ import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
     FormsModule,
     NgxSortableModule
   ],
-  providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [HighlightService, {provide: LocationStrategy, useClass: HashLocationStrategy}, AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

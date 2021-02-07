@@ -71,7 +71,7 @@ import { CssSkewTextOnHoverComponent } from './component/pages/css/css-skew-text
 import { Css3dTextOnHoverComponent } from './component/pages/css/css3d-text-on-hover/css3d-text-on-hover.component';
 import { CssImageHoverEffects1Component } from './component/pages/css/css-image-hover-effects1/css-image-hover-effects1.component';
 
-import { HlIComponent } from './component/pages/ad/hl/hl-i/hl-i.component';
+import { HlLComponent } from './component/pages/ad/hl/hl-l/hl-l.component';
 import { HlCComponent } from './component/pages/ad/hl/hl-c/hl-c.component';
 import { HlUComponent } from './component/pages/ad/hl/hl-u/hl-u.component';
 import { HlSComponent } from './component/pages/ad/hl/hl-s/hl-s.component';
@@ -154,7 +154,7 @@ const routes: Routes = [
 			{path: 'demo/demo', component: DemoComponent},
 			{path: 'demo/demo/:id', component: DemoComponent},
 
-			{path: 'admin/homelink', component: HlIComponent},
+			{path: 'admin/homelink', component: HlLComponent},
 			{path: 'admin/homelink/create', component: HlCComponent},
 			{path: 'admin/homelink/update/:id', component: HlUComponent},
 			{path: 'admin/homelink/updatesort', component: HlSComponent},

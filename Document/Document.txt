@@ -97,6 +97,9 @@ ng generate component component/pages/ad/hl/hl-s
 ng generate service services/pages/lhp/lhp
 ng generate service services/pages/home/hl
 
+ng generate service core/services/alertify/alertify
+ng generate service core/services/messages/messages
+
 //error
 ng generate component component/pages/us/err/err-notfound
 
@@ -209,3 +212,5 @@ https://daynhauhoc.com/t/autowired-trong-spring-java/74142
 
 
 add error for input: add class "is-invalid"
+
+https://www.youtube.com/watch?v=ATZ5fpThy2g

@@ -1,0 +1,60 @@
+https://viblo.asia/p/3-cach-de-giao-tiep-giua-cac-component-voi-nhau-trong-angular-2-aWj53pwQK6m
+sử dụng: Data service BehaviourSubject
+sau khi đẩy message thì gán lại "";
+
+For angular 11
+
+npm install alertifyjs --save
+and then on angular.json under styles array put these lines
+
+"styles": [
+    "node_modules/alertifyjs/build/css/alertify.min.css",
+    "node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
+],
+And then under on angular.json file under scripts array put this line.
+
+"scripts": [
+  "node_modules/alertifyjs/build/alertify.min.js"
+]
+After that create new service called alertify.service.ts
+
+import { Injectable } from '@angular/core';
+declare let alertify: any;
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AlertifyService {
+
+  constructor() { }
+  
+  confirm(message: string, okCallback: () => any) {
+    alertify.confirm(message, function(e:any) {
+      if (e) {
+        okCallback();
+      }
+    });
+  }
+
+  success(message: string) {
+    alertify.success(message);
+  }
+
+  error(message: string) {
+    alertify.error(message);
+  }
+
+  warning(message: string) {
+    alertify.success(message)
+  }
+
+  message(message: string) {
+    alertify.message(message)
+  }
+}
+Now register this service in app.module.ts at provider array
+
+  providers: [
+    AlertifyService
+  ]
+Now inject this service in your componenet.
